@@ -1,0 +1,87 @@
+Test stats
+----------------------------------------------------------------------
+Total tests executed:
+Ran 725 tests in 9.912s
+FAILED (failures=2, skipped=4)
+----------------------------------------------------------------------
+Codecov Report
+─────────────────────────────────────────────────────────────────────────────────── test.py3.12-default ────────────────────────────────────────────────────────────────────────────────────
+Name                                    Stmts   Miss  Cover   Missing
+---------------------------------------------------------------------
+mkdocs/__init__.py                          1      0   100%
+mkdocs/__main__.py                        185     33    82%   18-23, 29-45, 79-88, 340-356
+mkdocs/commands/__init__.py                 0      0   100%
+mkdocs/commands/build.py                  177      4    98%   257, 331, 350-351
+mkdocs/commands/gh_deploy.py               82      9    89%   30-32, 109, 148-157
+mkdocs/commands/new.py                     25      3    88%   35-36, 47
+mkdocs/commands/serve.py                   59     47    20%   38-110
+mkdocs/config/__init__.py                   2      0   100%
+mkdocs/config/base.py                     206     16    92%   103, 146, 166-170, 258-263, 267-270, 330-331, 357-358, 377, 388
+mkdocs/config/config_options.py           696     45    94%   205, 224-225, 260, 270, 279-280, 518-519, 548, 571-574, 577-604, 845-846, 938, 980, 1027, 1073, 1124, 1132, 1156, 1196, 1200, 1222, 1225-1226
+mkdocs/config/defaults.py                 113      2    98%   208, 218
+mkdocs/contrib/__init__.py                  0      0   100%
+mkdocs/contrib/search/__init__.py          83      2    98%   81, 112
+mkdocs/contrib/search/search_index.py     106      5    95%   18, 46, 123-130
+mkdocs/exceptions.py                       10      1    90%   19
+mkdocs/livereload/__init__.py             236     33    86%   111, 143, 173-190, 205, 214, 234, 237-238, 243-246, 297, 353, 367, 376-381
+mkdocs/localization.py                     43      0   100%
+mkdocs/plugins.py                         179     30    83%   12, 48, 79, 90, 152, 168, 194, 211, 229, 269, 287, 306, 323, 343, 362, 381, 399, 416, 487, 529-530, 564, 576, 579, 584, 660-661, 674, 696-697
+mkdocs/structure/__init__.py               20      0   100%
+mkdocs/structure/files.py                 326     28    91%   44, 78, 83, 110-111, 172-173, 177-178, 261, 265, 317, 349, 413, 497, 580-581, 585-586, 599, 614-626
+mkdocs/structure/nav.py                   150      3    98%   139, 212, 220
+mkdocs/structure/pages.py                 356     11    97%   164, 203-204, 216-218, 223, 266, 311, 313, 340
+mkdocs/structure/toc.py                    47      0   100%
+mkdocs/theme.py                            88      8    91%   87-91, 113, 119, 134-136, 149
+mkdocs/themes/__init__.py                   0      0   100%
+mkdocs/themes/mkdocs/__init__.py            0      0   100%
+mkdocs/themes/readthedocs/__init__.py       0      0   100%
+mkdocs/utils/__init__.py                  214     20    91%   26, 90-93, 105-110, 143, 246, 250-253, 312, 316, 397, 403-408
+mkdocs/utils/babel_stub.py                 22      0   100%
+mkdocs/utils/cache.py                      11     11     0%   1-34
+mkdocs/utils/filters.py                     1      1     0%   1
+mkdocs/utils/meta.py                       38      0   100%
+mkdocs/utils/rendering.py                  61      5    92%   16-17, 86, 101-102
+mkdocs/utils/templates.py                  33      2    94%   12-13
+mkdocs/utils/yaml.py                       73      7    90%   35, 48, 94, 102, 133-134, 138
+---------------------------------------------------------------------
+TOTAL                                    3643    326    91%
+─────────────────────────────────────────────────────────────────────────────────── test.py3.12-min-req ────────────────────────────────────────────────────────────────────────────────────
+Name                                    Stmts   Miss  Cover   Missing
+---------------------------------------------------------------------
+mkdocs/__init__.py                          1      0   100%
+mkdocs/__main__.py                        185     33    82%   18-23, 29-45, 79-88, 340-356
+mkdocs/commands/__init__.py                 0      0   100%
+mkdocs/commands/build.py                  177      4    98%   257, 331, 350-351
+mkdocs/commands/gh_deploy.py               82      9    89%   30-32, 109, 148-157
+mkdocs/commands/new.py                     25      3    88%   35-36, 47
+mkdocs/commands/serve.py                   59     47    20%   38-110
+mkdocs/config/__init__.py                   2      0   100%
+mkdocs/config/base.py                     206     16    92%   103, 146, 166-170, 258-263, 267-270, 330-331, 357-358, 377, 388
+mkdocs/config/config_options.py           696     45    94%   205, 224-225, 260, 270, 279-280, 518-519, 548, 571-574, 577-604, 845-846, 938, 980, 1027, 1073, 1124, 1132, 1156, 1196, 1200, 1222, 1225-1226
+mkdocs/config/defaults.py                 113      2    98%   208, 218
+mkdocs/contrib/__init__.py                  0      0   100%
+mkdocs/contrib/search/__init__.py          83      2    98%   81, 112
+mkdocs/contrib/search/search_index.py     106      5    95%   18, 46, 123-130
+mkdocs/exceptions.py                       10      1    90%   19
+mkdocs/livereload/__init__.py             236     33    86%   111, 143, 173-190, 205, 214, 234, 237-238, 243-246, 297, 353, 367, 376-381
+mkdocs/localization.py                     43      0   100%
+mkdocs/plugins.py                         179     30    83%   12, 48, 79, 90, 152, 168, 194, 211, 229, 269, 287, 306, 323, 343, 362, 381, 399, 416, 487, 529-530, 564, 576, 579, 584, 660-661, 674, 696-697
+mkdocs/structure/__init__.py               20      0   100%
+mkdocs/structure/files.py                 326     28    91%   44, 78, 83, 110-111, 172-173, 177-178, 261, 265, 317, 349, 413, 497, 580-581, 585-586, 599, 614-626
+mkdocs/structure/nav.py                   150      3    98%   139, 212, 220
+mkdocs/structure/pages.py                 356     11    97%   164, 203-204, 216-218, 223, 266, 311, 313, 340
+mkdocs/structure/toc.py                    47      0   100%
+mkdocs/theme.py                            88      8    91%   87-91, 113, 119, 134-136, 149
+mkdocs/themes/__init__.py                   0      0   100%
+mkdocs/themes/mkdocs/__init__.py            0      0   100%
+mkdocs/themes/readthedocs/__init__.py       0      0   100%
+mkdocs/utils/__init__.py                  214     20    91%   26, 90-93, 105-110, 143, 246, 250-253, 312, 316, 397, 403-408
+mkdocs/utils/babel_stub.py                 22      0   100%
+mkdocs/utils/cache.py                      11     11     0%   1-34
+mkdocs/utils/filters.py                     1      1     0%   1
+mkdocs/utils/meta.py                       38      0   100%
+mkdocs/utils/rendering.py                  61      5    92%   16-17, 86, 101-102
+mkdocs/utils/templates.py                  33      2    94%   12-13
+mkdocs/utils/yaml.py                       73      7    90%   35, 48, 94, 102, 133-134, 138
+---------------------------------------------------------------------
+TOTAL                                    3643    326    91%
