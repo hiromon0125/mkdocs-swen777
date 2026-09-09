@@ -27,7 +27,7 @@ We focused on two quality attributes from the assignment: **maintainability**, m
 
 Production modules average 160 lines, which is a reasonable size, but the distribution is uneven. `config/config_options.py` is 978 lines which is nearly six times the average and by far the largest module. `plugins.py` (541), `structure/files.py` (506), and `structure/pages.py` (466) have more than the average lines of code as well. These four files hold roughly 45% of all the production code.
 
-Comment density is at 18.2%, but it is not evenly distributed either. `plugins.py` contains over half documentation which may be intentional because its docstrings serve as the reference for developers writing MkDocs plugins. Several `utils/` modules carry almost no comments.
+Comment density is at 18.2%, but it is not evenly distributed either. `plugins.py` contains over half documentation which may be intentional because its docstrings serve as the reference for developers writing MkDocs plugins. Three `utils/` modules have no comments at all, while `utils/meta.py` is 45% documentation.
 
 ### Cyclomatic Complexity
 
@@ -50,7 +50,7 @@ Average complexity of 2.83 is low, and 88% of the production functions score 5 o
 
 MkDocs is well tested. There is nearly twice as much test code as production code, and line coverage sits at 91%. Test functions also average 1.23 complexity, meaning the tests themselves are simple and readable as well.
 
-Coverage is high across most modules, but two gaps in the coverage_report stand out. `commands/serve.py` sits at 20% and `utils/cache.py` at 0%. The `serve` file runs a development server that blocks until interrupted, which is difficult to exercise in a unit test. The `cache` file is an 11 line wrapper around an external package and requires network access to test it. These are cases where low coverage reflects the design of the code rather than neglect by the developers. It also shows why coverage should be read alongside structural metrics rather than on its own.
+Coverage is high across most modules, but two gaps in the coverage_report stand out. `commands/serve.py` sits at 20% and `utils/cache.py` at 0%. The `serve` file runs a development server that blocks until interrupted, which is difficult to exercise in a unit test. The `cache` file is a wrapper around an external package and requires network access to test it. These are cases where low coverage reflects the design of the code rather than neglect by the developers. It also shows why coverage should be read alongside structural metrics rather than on its own.
 
 ### What the metrics suggest
 
