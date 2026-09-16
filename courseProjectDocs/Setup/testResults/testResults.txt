@@ -1,0 +1,72 @@
+........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................EEEE............................................s............................................................................................................................................................................................................
+======================================================================
+ERROR: test_watch_with_broken_symlinks (tests.livereload_tests.BuildTests.test_watch_with_broken_symlinks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\SWEN-777\mkdocs-swen777BuildAndTest\mkdocs\tests\base.py", line 80, in wrapper
+    return fn(self, td, *args)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\SWEN-777\mkdocs-swen777BuildAndTest\mkdocs\tests\livereload_tests.py", line 614, in test_watch_with_broken_symlinks
+    Path(docs_dir, "broken_1").symlink_to(Path(docs_dir, "oh no"))
+  File "C:\Users\tycar\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1386, in symlink_to
+    os.symlink(target, self, target_is_directory)
+OSError: [WinError 1314] A required privilege is not held by the client: 'C:\\Users\\tycar\\AppData\\Local\\Temp\\mkdocs_test-jvnmj73v\\oh no' -> 'C:\\Users\\tycar\\AppData\\Local\\Temp\\mkdocs_test-jvnmj73v\\broken_1'
+
+======================================================================
+ERROR: test_watches_direct_symlinks (tests.livereload_tests.BuildTests.test_watches_direct_symlinks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\SWEN-777\mkdocs-swen777BuildAndTest\mkdocs\tests\base.py", line 80, in wrapper
+    return fn(self, td, *args)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\SWEN-777\mkdocs-swen777BuildAndTest\mkdocs\tests\base.py", line 80, in wrapper
+    return fn(self, td, *args)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\SWEN-777\mkdocs-swen777BuildAndTest\mkdocs\tests\base.py", line 80, in wrapper
+    return fn(self, td, *args)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\SWEN-777\mkdocs-swen777BuildAndTest\mkdocs\tests\livereload_tests.py", line 519, in test_watches_direct_symlinks
+    Path(origin_dir, "docs").symlink_to(dest_docs_dir, target_is_directory=True)
+  File "C:\Users\tycar\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1386, in symlink_to
+    os.symlink(target, self, target_is_directory)
+OSError: [WinError 1314] A required privilege is not held by the client: 'C:\\Users\\tycar\\AppData\\Local\\Temp\\mkdocs_test-dest_docs_dirhgv0fyeg' -> 'C:\\Users\\tycar\\AppData\\Local\\Temp\\mkdocs_test-origin_dir8ox7tczs\\docs'
+
+======================================================================
+ERROR: test_watches_through_relative_symlinks (tests.livereload_tests.BuildTests.test_watches_through_relative_symlinks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\SWEN-777\mkdocs-swen777BuildAndTest\mkdocs\tests\base.py", line 80, in wrapper
+    return fn(self, td, *args)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\SWEN-777\mkdocs-swen777BuildAndTest\mkdocs\tests\base.py", line 80, in wrapper
+    return fn(self, td, *args)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\SWEN-777\mkdocs-swen777BuildAndTest\mkdocs\tests\livereload_tests.py", line 593, in test_watches_through_relative_symlinks
+    Path(docs_dir, "README.md").symlink_to(Path("..", "README.md"))
+  File "C:\Users\tycar\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1386, in symlink_to
+    os.symlink(target, self, target_is_directory)
+OSError: [WinError 1314] A required privilege is not held by the client: '..\\README.md' -> 'C:\\Users\\tycar\\AppData\\Local\\Temp\\mkdocs_test-origin_dirrzx_auku\\docs\\README.md'
+
+======================================================================
+ERROR: test_watches_through_symlinks (tests.livereload_tests.BuildTests.test_watches_through_symlinks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\SWEN-777\mkdocs-swen777BuildAndTest\mkdocs\tests\base.py", line 80, in wrapper
+    return fn(self, td, *args)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\SWEN-777\mkdocs-swen777BuildAndTest\mkdocs\tests\base.py", line 80, in wrapper
+    return fn(self, td, *args)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\SWEN-777\mkdocs-swen777BuildAndTest\mkdocs\tests\base.py", line 80, in wrapper
+    return fn(self, td, *args)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\SWEN-777\mkdocs-swen777BuildAndTest\mkdocs\tests\livereload_tests.py", line 552, in test_watches_through_symlinks
+    Path(docs_dir, "link1.md").symlink_to(Path(tmp_dir, "file_dest_1.md"))
+  File "C:\Users\tycar\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 1386, in symlink_to
+    os.symlink(target, self, target_is_directory)
+OSError: [WinError 1314] A required privilege is not held by the client: 'C:\\Users\\tycar\\AppData\\Local\\Temp\\mkdocs_test-tmp_dirrt9ar8jc\\file_dest_1.md' -> 'C:\\Users\\tycar\\AppData\\Local\\Temp\\mkdocs_test-y4ij65l1\\link1.md'
+
+----------------------------------------------------------------------
+Ran 725 tests in 17.598s
+
+FAILED (errors=4, skipped=1)
