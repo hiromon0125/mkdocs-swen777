@@ -1,0 +1,9 @@
+[1m[1;32m *** Building installed themes. *** [0m
+[1m[1;32m *** Building theme: mkdocs *** [0m
+[1m[1;32m *** Building theme: readthedocs *** [0m
+[1m[1;32m *** Building test projects. *** [0m
+[1m[1;32m *** Building test project: complicated_config *** [0m
+[1m[1;32m *** Building test project: minimal *** [0m
+[1m[1;32m *** Building test project: subpages *** [0m
+[1m[1;32m *** Building test project: unicode *** [0m
+[1m[1;32m *** Theme and integration builds are in C:\Users\tycar\AppData\Local\Temp\mkdocs_integration-0ekdketc *** [0m
