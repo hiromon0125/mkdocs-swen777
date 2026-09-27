@@ -23,13 +23,22 @@ How to run the added unit tests
 
 ## Run the full suite with coverage
 
-- Run the existing MkDocs suite under coverage (same command as the baseline):
-  - `python -m coverage run --branch --source=mkdocs --omit "mkdocs/tests/*" -m unittest discover -s mkdocs -p "*tests.py" > testResults.txt 2>&1`
-- Run the added tests and append their coverage to the same data:
-  - `python -m coverage run --append --branch --source=mkdocs --omit "mkdocs/tests/*" -m unittest discover -s courseProjectCode/Unit-Testing -p "*tests.py" >> testResults.txt 2>&1`
-- Generate the reports:
-  - `python -m coverage report --show-missing > coverageReport.txt`
-  - `python -m coverage html`
+For the dependency versions used in the recorded run, activate a Python 3.12 virtual environment and run `python -m pip install -r courseProjectDocs/Unit-Testing/testResults/environment.txt` from the repository root. The recorded platform is macOS; platform-dependent results may differ elsewhere.
+
+The following shell commands write directly to the deliverable folders:
+
+```sh
+mkdir -p courseProjectDocs/Unit-Testing/testResults courseProjectDocs/Unit-Testing/testCoverage
+python -m coverage run --branch --source=mkdocs --omit "mkdocs/tests/*" -m unittest discover -s mkdocs -p "*tests.py" > courseProjectDocs/Unit-Testing/testResults/testResults.txt 2>&1
+python -m coverage report --show-missing > courseProjectDocs/Unit-Testing/testCoverage/existingSuiteCoverageReport.txt
+python -m coverage json -o courseProjectDocs/Unit-Testing/testCoverage/existingSuiteCoverage.json
+python -m coverage run --append --branch --source=mkdocs --omit "mkdocs/tests/*" -m unittest discover -s courseProjectCode/Unit-Testing -p "*tests.py" -v >> courseProjectDocs/Unit-Testing/testResults/testResults.txt 2>&1
+python -m coverage report --show-missing > courseProjectDocs/Unit-Testing/testCoverage/coverageReport.txt
+python -m coverage json -o courseProjectDocs/Unit-Testing/testCoverage/coverage.json
+python -m coverage html -d courseProjectDocs/Unit-Testing/testCoverage/htmlcov
+```
+
+The recorded existing-suite run exits with status 1 because two subtests fail within one method. Run the subsequent commands even when that occurs, so the added tests and reports are produced; do not join these commands with `&&`. See `report.md` for the failure details and method-level counts.
 
 NOTES:
 
@@ -41,7 +50,7 @@ NOTES:
 
 ## Output files
 
-The commands above write to the repository root. The generated files were then moved into `testResults/` and `testCoverage/`.
+The commands above write directly into this folder’s `testResults/` and `testCoverage/` directories.
 
 | File | Contents |
 |---|---|
@@ -49,3 +58,6 @@ The commands above write to the repository root. The generated files were then m
 | `testCoverage/coverageReport.txt` | Per-module statement and branch coverage, including the added tests |
 | `testCoverage/htmlcov/` | Browsable HTML coverage report. Open `index.html` |
 | `report.md` | New test cases and rationale, test results, and coverage comparison with the baseline |
+| `testCoverage/existingSuiteCoverageReport.txt` | Existing-suite control measurement on the current environment |
+| `testCoverage/existingSuiteCoverage.json`, `testCoverage/coverage.json` | Exact coverage counts before and after adding the cases |
+| `testResults/environment.txt` | Recorded platform, interpreter, and installable dependency versions |
