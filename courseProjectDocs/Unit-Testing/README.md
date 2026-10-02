@@ -66,6 +66,7 @@ The commands above write directly into this folder’s `testResults/` and `testC
 | `testCoverage/existingSuiteCoverage.json`, `testCoverage/coverage.json` | Exact coverage counts before and after adding the cases |
 | `testResults/environment.txt` | Recorded platform, interpreter, and installable dependency versions |
 
+These reports are updated frequently, if you wish to review the files at different time please review older commits or tagged commits to view reports from the time that the documents are written.
 
 # Unit Testing II
 

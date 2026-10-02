@@ -74,8 +74,4 @@ change is smaller than the change in `serve.py` because `serve.py` contains only
 targeted a previously under-tested component and covered meaningful behavior
 rather than repeating paths already exercised by the existing suite.
 
-The complete text report is available in
-[`mockingCoverageReport.txt`](testCoverage/mockingCoverageReport.txt). Exact
-machine-readable before and after results are stored in
-[`mockingBaselineCoverage.json`](testCoverage/mockingBaselineCoverage.json) and
-[`mockingCoverage.json`](testCoverage/mockingCoverage.json).
+The complete text report is available in [`coverageReport.txt`](testCoverage/mockingCoverageReport.txt). Exact machine-readable results are stored in [`coverage.json`](testCoverage/coverage.json).
