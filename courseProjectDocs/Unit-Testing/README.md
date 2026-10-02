@@ -12,7 +12,7 @@ How to run the added unit tests
 
 ## Added tests
 
-- Location: `courseProjectCode/Unit-Testing/unit_testing1_tests.py`
+- Location: `courseProjectCode/Unit-Testing/unit_testing1*.py`
 - Framework: Python's built-in `unittest`, the same framework used by the existing MkDocs test suite
 - 15 test cases targeting lines reported as missing in the baseline coverage report (`courseProjectDocs/Setup/testCoverage/coverageReport.txt`)
 
