@@ -31,6 +31,9 @@ All names below refer to test methods in `unit_testing1_tests.py`.
 
 ## Test results
 
+> [!NOTE]
+> The report files mentioned below have been updated since Unit test 2 assignment. If you wish to review the resulting report files, please view [tagged commit on GitHub](https://github.com/hiromon0125/mkdocs-swen777/releases/tag/unittest1).
+
 The [full test output](testResults/testResults.txt) includes error details for the existing tests and individual results for all 15 added tests.
 
 | Suite | Test methods run | Passed | Failed methods | Errors | Skipped |
