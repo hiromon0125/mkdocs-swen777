@@ -18,7 +18,7 @@ How to run the added unit tests
 
 ## Run only the added tests
 
-- `python -m unittest discover -s courseProjectCode/Unit-Testing -p "*tests.py" -v`
+- `python -m unittest discover -s courseProjectCode/Unit-Testing -p "unit_testing1_tests.py" -v`
 - Expected result: `Ran 15 tests` and `OK`
 
 ## Run the full suite with coverage
@@ -36,6 +36,10 @@ python -m coverage run --append --branch --source=mkdocs --omit "mkdocs/tests/*"
 python -m coverage report --show-missing > courseProjectDocs/Unit-Testing/testCoverage/coverageReport.txt
 python -m coverage json -o courseProjectDocs/Unit-Testing/testCoverage/coverage.json
 python -m coverage html -d courseProjectDocs/Unit-Testing/testCoverage/htmlcov
+```
+or alternatively at the project root execute update_report.sh:
+```sh
+./courseProjectDocs/Unit-Testing/update_report.sh
 ```
 
 The recorded existing-suite run exits with status 1 because two subtests fail within one method. Run the subsequent commands even when that occurs, so the added tests and reports are produced; do not join these commands with `&&`. See `report.md` for the failure details and method-level counts.
@@ -61,3 +65,19 @@ The commands above write directly into this folder’s `testResults/` and `testC
 | `testCoverage/existingSuiteCoverageReport.txt` | Existing-suite control measurement on the current environment |
 | `testCoverage/existingSuiteCoverage.json`, `testCoverage/coverage.json` | Exact coverage counts before and after adding the cases |
 | `testResults/environment.txt` | Recorded platform, interpreter, and installable dependency versions |
+
+
+# Unit Testing II
+
+How to run the added unit tests
+
+## Run only the added tests
+
+- `python -m unittest discover -s courseProjectCode/Unit-Testing -p "unit_testing2*.py" -v`
+- Expected result: `Ran 3 tests` and `OK`
+
+
+## Run the full suite with coverage
+
+[The same list of commands](#Run-the-full-suite-with-coverage) can be used again to replicate the [same output files](#output-files).
+

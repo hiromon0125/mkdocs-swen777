@@ -14,7 +14,7 @@ The dependencies used by `serve()` were mocked so the tests focus on the functio
 2. `build`: Prevents each unit test from performing a complete MkDocs build while still allowing the call to `build()` to occur inside `serve()`.
 3. `load_config`: Returns a controlled configuration with known documentation, configuration, theme, and extra watch paths.
 4. `tempfile.mkdtemp`: Returns a predictable temporary site directory owned by the test fixture.
-5. `shutil.rmtree`: Prevents `serve()` from deleting the test fixture before `tearDown()` cleans it up.
+5. `shutil.rmtree`: Prevents `serve()` from deleting the test fixture. The fixture cleanup is registered before the patchers, so `unittest` stops the patchers first and then removes the temporary directory.
 
 `LiveReloadServer` is the main test double because it replaces the long-running network component. `MagicMock` records each method call, which allows the tests to check that the server is started, given the correct watch paths, and shut down. The other mocks provide controlled inputs and remove unrelated file and build behavior from the unit under test.
 
@@ -35,6 +35,7 @@ outcomes of the live-reload condition.
 | Existing MkDocs suite | 725 | 721 | 0 | 0 | 4 |
 | Unit Testing I additions | 15 | 15 | 0 | 0 | 0 |
 | New mocking tests | 3 | 3 | 0 | 0 | 0 |
+
 All three new mocking tests passed.
 
 ## Coverage improvement analysis
@@ -78,4 +79,3 @@ The complete text report is available in
 machine-readable before and after results are stored in
 [`mockingBaselineCoverage.json`](testCoverage/mockingBaselineCoverage.json) and
 [`mockingCoverage.json`](testCoverage/mockingCoverage.json).
-
