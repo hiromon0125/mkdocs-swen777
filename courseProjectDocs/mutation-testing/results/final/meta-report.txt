@@ -1,0 +1,578 @@
+mkdocs\utils\meta.py core/ReplaceBinaryOperator_BitOr_Add 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -48,7 +48,7 @@
+ # Data Parser                                                       #
+ #####################################################################
+ 
+-YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE | re.DOTALL)
++YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE + re.DOTALL)
+ META_RE = re.compile(r'^[ ]{0,3}(?P<key>[A-Za-z0-9_-]+):\s*(?P<value>.*)')
+ META_MORE_RE = re.compile(r'^([ ]{4}|\t)(\s*)(?P<value>.*)')
+ 
+============
+mkdocs\utils\meta.py core/ReplaceBinaryOperator_BitOr_Sub 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -48,7 +48,7 @@
+ # Data Parser                                                       #
+ #####################################################################
+ 
+-YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE | re.DOTALL)
++YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE - re.DOTALL)
+ META_RE = re.compile(r'^[ ]{0,3}(?P<key>[A-Za-z0-9_-]+):\s*(?P<value>.*)')
+ META_MORE_RE = re.compile(r'^([ ]{4}|\t)(\s*)(?P<value>.*)')
+ 
+============
+mkdocs\utils\meta.py core/ReplaceBinaryOperator_BitOr_Mul 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -48,7 +48,7 @@
+ # Data Parser                                                       #
+ #####################################################################
+ 
+-YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE | re.DOTALL)
++YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE * re.DOTALL)
+ META_RE = re.compile(r'^[ ]{0,3}(?P<key>[A-Za-z0-9_-]+):\s*(?P<value>.*)')
+ META_MORE_RE = re.compile(r'^([ ]{4}|\t)(\s*)(?P<value>.*)')
+ 
+============
+mkdocs\utils\meta.py core/ReplaceBinaryOperator_BitOr_Div 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -48,7 +48,7 @@
+ # Data Parser                                                       #
+ #####################################################################
+ 
+-YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE | re.DOTALL)
++YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE / re.DOTALL)
+ META_RE = re.compile(r'^[ ]{0,3}(?P<key>[A-Za-z0-9_-]+):\s*(?P<value>.*)')
+ META_MORE_RE = re.compile(r'^([ ]{4}|\t)(\s*)(?P<value>.*)')
+ 
+============
+mkdocs\utils\meta.py core/ReplaceBinaryOperator_BitOr_FloorDiv 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -48,7 +48,7 @@
+ # Data Parser                                                       #
+ #####################################################################
+ 
+-YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE | re.DOTALL)
++YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE // re.DOTALL)
+ META_RE = re.compile(r'^[ ]{0,3}(?P<key>[A-Za-z0-9_-]+):\s*(?P<value>.*)')
+ META_MORE_RE = re.compile(r'^([ ]{4}|\t)(\s*)(?P<value>.*)')
+ 
+============
+mkdocs\utils\meta.py core/ReplaceBinaryOperator_BitOr_Mod 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -48,7 +48,7 @@
+ # Data Parser                                                       #
+ #####################################################################
+ 
+-YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE | re.DOTALL)
++YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE % re.DOTALL)
+ META_RE = re.compile(r'^[ ]{0,3}(?P<key>[A-Za-z0-9_-]+):\s*(?P<value>.*)')
+ META_MORE_RE = re.compile(r'^([ ]{4}|\t)(\s*)(?P<value>.*)')
+ 
+============
+mkdocs\utils\meta.py core/ReplaceBinaryOperator_BitOr_Pow 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -48,7 +48,7 @@
+ # Data Parser                                                       #
+ #####################################################################
+ 
+-YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE | re.DOTALL)
++YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE ** re.DOTALL)
+ META_RE = re.compile(r'^[ ]{0,3}(?P<key>[A-Za-z0-9_-]+):\s*(?P<value>.*)')
+ META_MORE_RE = re.compile(r'^([ ]{4}|\t)(\s*)(?P<value>.*)')
+ 
+============
+mkdocs\utils\meta.py core/ReplaceBinaryOperator_BitOr_RShift 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -48,7 +48,7 @@
+ # Data Parser                                                       #
+ #####################################################################
+ 
+-YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE | re.DOTALL)
++YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE >> re.DOTALL)
+ META_RE = re.compile(r'^[ ]{0,3}(?P<key>[A-Za-z0-9_-]+):\s*(?P<value>.*)')
+ META_MORE_RE = re.compile(r'^([ ]{4}|\t)(\s*)(?P<value>.*)')
+ 
+============
+mkdocs\utils\meta.py core/ReplaceBinaryOperator_BitOr_LShift 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -48,7 +48,7 @@
+ # Data Parser                                                       #
+ #####################################################################
+ 
+-YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE | re.DOTALL)
++YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE << re.DOTALL)
+ META_RE = re.compile(r'^[ ]{0,3}(?P<key>[A-Za-z0-9_-]+):\s*(?P<value>.*)')
+ META_MORE_RE = re.compile(r'^([ ]{4}|\t)(\s*)(?P<value>.*)')
+ 
+============
+mkdocs\utils\meta.py core/ReplaceBinaryOperator_BitOr_BitAnd 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -48,7 +48,7 @@
+ # Data Parser                                                       #
+ #####################################################################
+ 
+-YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE | re.DOTALL)
++YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE & re.DOTALL)
+ META_RE = re.compile(r'^[ ]{0,3}(?P<key>[A-Za-z0-9_-]+):\s*(?P<value>.*)')
+ META_MORE_RE = re.compile(r'^([ ]{4}|\t)(\s*)(?P<value>.*)')
+ 
+============
+mkdocs\utils\meta.py core/ReplaceBinaryOperator_BitOr_BitXor 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -48,7 +48,7 @@
+ # Data Parser                                                       #
+ #####################################################################
+ 
+-YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE | re.DOTALL)
++YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE ^ re.DOTALL)
+ META_RE = re.compile(r'^[ ]{0,3}(?P<key>[A-Za-z0-9_-]+):\s*(?P<value>.*)')
+ META_MORE_RE = re.compile(r'^([ ]{4}|\t)(\s*)(?P<value>.*)')
+ 
+============
+mkdocs\utils\meta.py core/ReplaceComparisonOperator_Eq_NotEq 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -80,7 +80,7 @@
+     while lines:
+         line = lines.pop(0)
+ 
+-        if line.strip() == '':
++        if line.strip() != '':
+             break  # blank line - done
+         if m1 := META_RE.match(line):
+             key = m1.group('key').lower().strip()
+============
+mkdocs\utils\meta.py core/ReplaceComparisonOperator_Eq_Lt 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -80,7 +80,7 @@
+     while lines:
+         line = lines.pop(0)
+ 
+-        if line.strip() == '':
++        if line.strip() < '':
+             break  # blank line - done
+         if m1 := META_RE.match(line):
+             key = m1.group('key').lower().strip()
+============
+mkdocs\utils\meta.py core/ReplaceComparisonOperator_Eq_LtE 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -80,7 +80,7 @@
+     while lines:
+         line = lines.pop(0)
+ 
+-        if line.strip() == '':
++        if line.strip() <= '':
+             break  # blank line - done
+         if m1 := META_RE.match(line):
+             key = m1.group('key').lower().strip()
+============
+mkdocs\utils\meta.py core/ReplaceComparisonOperator_Eq_Gt 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -80,7 +80,7 @@
+     while lines:
+         line = lines.pop(0)
+ 
+-        if line.strip() == '':
++        if line.strip() > '':
+             break  # blank line - done
+         if m1 := META_RE.match(line):
+             key = m1.group('key').lower().strip()
+============
+mkdocs\utils\meta.py core/ReplaceComparisonOperator_Eq_GtE 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -80,7 +80,7 @@
+     while lines:
+         line = lines.pop(0)
+ 
+-        if line.strip() == '':
++        if line.strip() >= '':
+             break  # blank line - done
+         if m1 := META_RE.match(line):
+             key = m1.group('key').lower().strip()
+============
+mkdocs\utils\meta.py core/ReplaceComparisonOperator_Eq_Is 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -80,7 +80,7 @@
+     while lines:
+         line = lines.pop(0)
+ 
+-        if line.strip() == '':
++        if line.strip() is '':
+             break  # blank line - done
+         if m1 := META_RE.match(line):
+             key = m1.group('key').lower().strip()
+============
+mkdocs\utils\meta.py core/ReplaceComparisonOperator_Eq_IsNot 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -80,7 +80,7 @@
+     while lines:
+         line = lines.pop(0)
+ 
+-        if line.strip() == '':
++        if line.strip() is not '':
+             break  # blank line - done
+         if m1 := META_RE.match(line):
+             key = m1.group('key').lower().strip()
+============
+mkdocs\utils\meta.py core/AddNot 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -62,7 +62,7 @@
+     data = {}
+ 
+     # First try YAML
+-    if m := YAML_RE.match(doc):
++    if not m := YAML_RE.match(doc):
+         try:
+             data = yaml.load(m.group(1), SafeLoader)
+             if isinstance(data, dict):
+============
+mkdocs\utils\meta.py core/AddNot 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -65,7 +65,7 @@
+     if m := YAML_RE.match(doc):
+         try:
+             data = yaml.load(m.group(1), SafeLoader)
+-            if isinstance(data, dict):
++            if not isinstance(data, dict):
+                 doc = doc[m.end() :].lstrip('\n')
+             else:
+                 data = {}  # type: ignore[unreachable]
+============
+mkdocs\utils\meta.py core/AddNot 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -77,7 +77,7 @@
+     lines = doc.replace('\r\n', '\n').replace('\r', '\n').split('\n')
+ 
+     key = None
+-    while lines:
++    while not lines:
+         line = lines.pop(0)
+ 
+         if line.strip() == '':
+============
+mkdocs\utils\meta.py core/AddNot 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -80,7 +80,7 @@
+     while lines:
+         line = lines.pop(0)
+ 
+-        if line.strip() == '':
++        if not line.strip() == '':
+             break  # blank line - done
+         if m1 := META_RE.match(line):
+             key = m1.group('key').lower().strip()
+============
+mkdocs\utils\meta.py core/AddNot 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -82,7 +82,7 @@
+ 
+         if line.strip() == '':
+             break  # blank line - done
+-        if m1 := META_RE.match(line):
++        if not m1 := META_RE.match(line):
+             key = m1.group('key').lower().strip()
+             value = m1.group('value').strip()
+             if key in data:
+============
+mkdocs\utils\meta.py core/AddNot 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -85,7 +85,7 @@
+         if m1 := META_RE.match(line):
+             key = m1.group('key').lower().strip()
+             value = m1.group('value').strip()
+-            if key in data:
++            if not key in data:
+                 data[key] += f' {value}'
+             else:
+                 data[key] = value
+============
+mkdocs\utils\meta.py core/AddNot 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -91,7 +91,7 @@
+                 data[key] = value
+         else:
+             m2 = META_MORE_RE.match(line)
+-            if m2 and key:
++            if not m2 and key:
+                 # Add another line to existing key
+                 data[key] += ' {}'.format(m2.group('value').strip())
+             else:
+============
+mkdocs\utils\meta.py core/ReplaceAndWithOr 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -91,7 +91,7 @@
+                 data[key] = value
+         else:
+             m2 = META_MORE_RE.match(line)
+-            if m2 and key:
++            if m2 or key:
+                 # Add another line to existing key
+                 data[key] += ' {}'.format(m2.group('value').strip())
+             else:
+============
+mkdocs\utils\meta.py core/ReplaceBreakWithContinue 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -81,7 +81,7 @@
+         line = lines.pop(0)
+ 
+         if line.strip() == '':
+-            break  # blank line - done
++            continue  # blank line - done
+         if m1 := META_RE.match(line):
+             key = m1.group('key').lower().strip()
+             value = m1.group('value').strip()
+============
+mkdocs\utils\meta.py core/ReplaceBreakWithContinue 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -96,6 +96,6 @@
+                 data[key] += ' {}'.format(m2.group('value').strip())
+             else:
+                 lines.insert(0, line)
+-                break  # no meta data - done
++                continue  # no meta data - done
+     return '\n'.join(lines).lstrip('\n'), data
+ 
+============
+mkdocs\utils\meta.py core/ExceptionReplacer 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -41,7 +41,7 @@
+ 
+ try:
+     from yaml import CSafeLoader as SafeLoader
+-except ImportError:  # pragma: no cover
++except CosmicRayTestingException:  # pragma: no cover
+     from yaml import SafeLoader  # type: ignore
+ 
+ #####################################################################
+============
+mkdocs\utils\meta.py core/ExceptionReplacer 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -69,7 +69,7 @@
+                 doc = doc[m.end() :].lstrip('\n')
+             else:
+                 data = {}  # type: ignore[unreachable]
+-        except Exception:
++        except CosmicRayTestingException:
+             pass
+         return doc, data
+ 
+============
+mkdocs\utils\meta.py core/NumberReplacer 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -64,7 +64,7 @@
+     # First try YAML
+     if m := YAML_RE.match(doc):
+         try:
+-            data = yaml.load(m.group(1), SafeLoader)
++            data = yaml.load(m.group( 2), SafeLoader)
+             if isinstance(data, dict):
+                 doc = doc[m.end() :].lstrip('\n')
+             else:
+============
+mkdocs\utils\meta.py core/NumberReplacer 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -64,7 +64,7 @@
+     # First try YAML
+     if m := YAML_RE.match(doc):
+         try:
+-            data = yaml.load(m.group(1), SafeLoader)
++            data = yaml.load(m.group( 0), SafeLoader)
+             if isinstance(data, dict):
+                 doc = doc[m.end() :].lstrip('\n')
+             else:
+============
+mkdocs\utils\meta.py core/NumberReplacer 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -78,7 +78,7 @@
+ 
+     key = None
+     while lines:
+-        line = lines.pop(0)
++        line = lines.pop( 1)
+ 
+         if line.strip() == '':
+             break  # blank line - done
+============
+mkdocs\utils\meta.py core/NumberReplacer 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -78,7 +78,7 @@
+ 
+     key = None
+     while lines:
+-        line = lines.pop(0)
++        line = lines.pop( -1)
+ 
+         if line.strip() == '':
+             break  # blank line - done
+============
+mkdocs\utils\meta.py core/NumberReplacer 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -95,7 +95,7 @@
+                 # Add another line to existing key
+                 data[key] += ' {}'.format(m2.group('value').strip())
+             else:
+-                lines.insert(0, line)
++                lines.insert( 1, line)
+                 break  # no meta data - done
+     return '\n'.join(lines).lstrip('\n'), data
+ 
+============
+mkdocs\utils\meta.py core/NumberReplacer 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -95,7 +95,7 @@
+                 # Add another line to existing key
+                 data[key] += ' {}'.format(m2.group('value').strip())
+             else:
+-                lines.insert(0, line)
++                lines.insert( -1, line)
+                 break  # no meta data - done
+     return '\n'.join(lines).lstrip('\n'), data
+ 
+============
+total jobs: 36
+complete: 36 (100.00%)
+surviving mutants: 5 (13.89%)

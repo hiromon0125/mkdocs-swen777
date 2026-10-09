@@ -1,0 +1,8 @@
+# cosmic-ray configuration for mkdocs/structure/toc.py
+[cosmic-ray]
+module-path = "mkdocs/structure/toc.py"
+timeout = 60.0
+test-command = "python -m pytest -x -o python_files=*_tests.py mkdocs/tests/structure/toc_tests.py courseProjectCode/mutation-testing/mutation_toc_tests.py"
+
+[cosmic-ray.distributor]
+name = "local"

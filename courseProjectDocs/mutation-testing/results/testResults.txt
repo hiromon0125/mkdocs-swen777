@@ -1,0 +1,23 @@
+test_same_version_logs_nothing_and_does_not_abort (mutation_gh_deploy_tests.CheckVersionTests.test_same_version_logs_nothing_and_does_not_abort)
+Deploying the same version is neither an upgrade nor a downgrade. ... ok
+test_uppercase_prerelease_is_parsed_case_insensitively (mutation_gh_deploy_tests.CheckVersionTests.test_uppercase_prerelease_is_parsed_case_insensitively)
+``2.0.0RC1`` must be read as ``2.0.0rc1``, which is older than ``2.0.0``. ... ok
+test_default_arguments_are_passed_to_ghp_import (mutation_gh_deploy_tests.GhDeployTests.test_default_arguments_are_passed_to_ghp_import)
+Checks every argument passed to ghp-import and the printed Pages URL. ... ok
+test_non_metadata_line_after_key_stops_parsing (mutation_meta_tests.MultiMarkdownParsingTests.test_non_metadata_line_after_key_stops_parsing)
+The first non-metadata line ends the block and is put back in its original place. ... ok
+test_whitespace_only_line_ends_metadata (mutation_meta_tests.MultiMarkdownParsingTests.test_whitespace_only_line_ends_metadata)
+A line of spaces counts as the blank separator and is removed. ... ok
+test_falls_back_to_pure_python_loader_without_libyaml (mutation_meta_tests.SafeLoaderFallbackTests.test_falls_back_to_pure_python_loader_without_libyaml)
+meta.py still works when PyYAML's fast C loader isn't installed. ... ok
+test_children_of_first_item_are_not_marked_active (mutation_toc_tests.TocActiveFlagTests.test_children_of_first_item_are_not_marked_active)
+The active flag applies to the top-level entry only, not its children. ... ok
+test_empty_token_list_gives_empty_toc (mutation_toc_tests.TocActiveFlagTests.test_empty_token_list_gives_empty_toc)
+An empty token list must not raise and must produce an empty TOC. ... ok
+test_first_top_level_item_is_marked_active (mutation_toc_tests.TocActiveFlagTests.test_first_top_level_item_is_marked_active)
+Only the first top-level entry is marked active, and the flag is exactly ``True``. ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.007s
+
+OK

@@ -1,0 +1,531 @@
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_Add 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -47,7 +47,7 @@
+     return sha
+ 
+ 
+-def _get_remote_url(remote_name: str) -> tuple[str, str] | tuple[None, None]:
++def _get_remote_url(remote_name: str) -> tuple[str, str] + tuple[None, None]:
+     # No CNAME found.  We will use the origin URL to determine the GitHub
+     # Pages location.
+     remote = f"remote.{remote_name}.url"
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_Add 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -78,7 +78,7 @@
+ 
+     stdout, _ = proc.communicate()
+     msg = stdout.decode('utf-8').strip()
+-    m = re.search(r'\d+(\.\d+)+((a|b|rc)\d+)?(\.post\d+)?(\.dev\d+)?', msg, re.X | re.I)
++    m = re.search(r'\d+(\.\d+)+((a|b|rc)\d+)?(\.post\d+)?(\.dev\d+)?', msg, re.X + re.I)
+     previousv = version.parse(m.group()) if m else None
+     currentv = version.parse(mkdocs.__version__)
+     if not previousv:
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_Add 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -99,7 +99,7 @@
+ 
+ def gh_deploy(
+     config: MkDocsConfig,
+-    message: str | None = None,
++    message: str + None = None,
+     force=False,
+     no_history=False,
+     ignore_version=False,
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_Sub 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -47,7 +47,7 @@
+     return sha
+ 
+ 
+-def _get_remote_url(remote_name: str) -> tuple[str, str] | tuple[None, None]:
++def _get_remote_url(remote_name: str) -> tuple[str, str] - tuple[None, None]:
+     # No CNAME found.  We will use the origin URL to determine the GitHub
+     # Pages location.
+     remote = f"remote.{remote_name}.url"
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_Sub 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -99,7 +99,7 @@
+ 
+ def gh_deploy(
+     config: MkDocsConfig,
+-    message: str | None = None,
++    message: str - None = None,
+     force=False,
+     no_history=False,
+     ignore_version=False,
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_Mul 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -47,7 +47,7 @@
+     return sha
+ 
+ 
+-def _get_remote_url(remote_name: str) -> tuple[str, str] | tuple[None, None]:
++def _get_remote_url(remote_name: str) -> tuple[str, str] * tuple[None, None]:
+     # No CNAME found.  We will use the origin URL to determine the GitHub
+     # Pages location.
+     remote = f"remote.{remote_name}.url"
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_Mul 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -99,7 +99,7 @@
+ 
+ def gh_deploy(
+     config: MkDocsConfig,
+-    message: str | None = None,
++    message: str * None = None,
+     force=False,
+     no_history=False,
+     ignore_version=False,
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_Div 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -47,7 +47,7 @@
+     return sha
+ 
+ 
+-def _get_remote_url(remote_name: str) -> tuple[str, str] | tuple[None, None]:
++def _get_remote_url(remote_name: str) -> tuple[str, str] / tuple[None, None]:
+     # No CNAME found.  We will use the origin URL to determine the GitHub
+     # Pages location.
+     remote = f"remote.{remote_name}.url"
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_Div 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -99,7 +99,7 @@
+ 
+ def gh_deploy(
+     config: MkDocsConfig,
+-    message: str | None = None,
++    message: str / None = None,
+     force=False,
+     no_history=False,
+     ignore_version=False,
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_FloorDiv 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -47,7 +47,7 @@
+     return sha
+ 
+ 
+-def _get_remote_url(remote_name: str) -> tuple[str, str] | tuple[None, None]:
++def _get_remote_url(remote_name: str) -> tuple[str, str] // tuple[None, None]:
+     # No CNAME found.  We will use the origin URL to determine the GitHub
+     # Pages location.
+     remote = f"remote.{remote_name}.url"
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_FloorDiv 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -99,7 +99,7 @@
+ 
+ def gh_deploy(
+     config: MkDocsConfig,
+-    message: str | None = None,
++    message: str // None = None,
+     force=False,
+     no_history=False,
+     ignore_version=False,
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_Mod 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -47,7 +47,7 @@
+     return sha
+ 
+ 
+-def _get_remote_url(remote_name: str) -> tuple[str, str] | tuple[None, None]:
++def _get_remote_url(remote_name: str) -> tuple[str, str] % tuple[None, None]:
+     # No CNAME found.  We will use the origin URL to determine the GitHub
+     # Pages location.
+     remote = f"remote.{remote_name}.url"
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_Mod 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -99,7 +99,7 @@
+ 
+ def gh_deploy(
+     config: MkDocsConfig,
+-    message: str | None = None,
++    message: str % None = None,
+     force=False,
+     no_history=False,
+     ignore_version=False,
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_Pow 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -47,7 +47,7 @@
+     return sha
+ 
+ 
+-def _get_remote_url(remote_name: str) -> tuple[str, str] | tuple[None, None]:
++def _get_remote_url(remote_name: str) -> tuple[str, str] ** tuple[None, None]:
+     # No CNAME found.  We will use the origin URL to determine the GitHub
+     # Pages location.
+     remote = f"remote.{remote_name}.url"
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_Pow 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -99,7 +99,7 @@
+ 
+ def gh_deploy(
+     config: MkDocsConfig,
+-    message: str | None = None,
++    message: str ** None = None,
+     force=False,
+     no_history=False,
+     ignore_version=False,
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_RShift 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -47,7 +47,7 @@
+     return sha
+ 
+ 
+-def _get_remote_url(remote_name: str) -> tuple[str, str] | tuple[None, None]:
++def _get_remote_url(remote_name: str) -> tuple[str, str] >> tuple[None, None]:
+     # No CNAME found.  We will use the origin URL to determine the GitHub
+     # Pages location.
+     remote = f"remote.{remote_name}.url"
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_RShift 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -99,7 +99,7 @@
+ 
+ def gh_deploy(
+     config: MkDocsConfig,
+-    message: str | None = None,
++    message: str >> None = None,
+     force=False,
+     no_history=False,
+     ignore_version=False,
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_LShift 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -47,7 +47,7 @@
+     return sha
+ 
+ 
+-def _get_remote_url(remote_name: str) -> tuple[str, str] | tuple[None, None]:
++def _get_remote_url(remote_name: str) -> tuple[str, str] << tuple[None, None]:
+     # No CNAME found.  We will use the origin URL to determine the GitHub
+     # Pages location.
+     remote = f"remote.{remote_name}.url"
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_LShift 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -99,7 +99,7 @@
+ 
+ def gh_deploy(
+     config: MkDocsConfig,
+-    message: str | None = None,
++    message: str << None = None,
+     force=False,
+     no_history=False,
+     ignore_version=False,
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_BitAnd 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -47,7 +47,7 @@
+     return sha
+ 
+ 
+-def _get_remote_url(remote_name: str) -> tuple[str, str] | tuple[None, None]:
++def _get_remote_url(remote_name: str) -> tuple[str, str] & tuple[None, None]:
+     # No CNAME found.  We will use the origin URL to determine the GitHub
+     # Pages location.
+     remote = f"remote.{remote_name}.url"
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_BitAnd 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -99,7 +99,7 @@
+ 
+ def gh_deploy(
+     config: MkDocsConfig,
+-    message: str | None = None,
++    message: str & None = None,
+     force=False,
+     no_history=False,
+     ignore_version=False,
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_BitXor 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -47,7 +47,7 @@
+     return sha
+ 
+ 
+-def _get_remote_url(remote_name: str) -> tuple[str, str] | tuple[None, None]:
++def _get_remote_url(remote_name: str) -> tuple[str, str] ^ tuple[None, None]:
+     # No CNAME found.  We will use the origin URL to determine the GitHub
+     # Pages location.
+     remote = f"remote.{remote_name}.url"
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_BitXor 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -78,7 +78,7 @@
+ 
+     stdout, _ = proc.communicate()
+     msg = stdout.decode('utf-8').strip()
+-    m = re.search(r'\d+(\.\d+)+((a|b|rc)\d+)?(\.post\d+)?(\.dev\d+)?', msg, re.X | re.I)
++    m = re.search(r'\d+(\.\d+)+((a|b|rc)\d+)?(\.post\d+)?(\.dev\d+)?', msg, re.X ^ re.I)
+     previousv = version.parse(m.group()) if m else None
+     currentv = version.parse(mkdocs.__version__)
+     if not previousv:
+============
+mkdocs\commands\gh_deploy.py core/ReplaceBinaryOperator_BitOr_BitXor 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -99,7 +99,7 @@
+ 
+ def gh_deploy(
+     config: MkDocsConfig,
+-    message: str | None = None,
++    message: str ^ None = None,
+     force=False,
+     no_history=False,
+     ignore_version=False,
+============
+mkdocs\commands\gh_deploy.py core/ReplaceComparisonOperator_Eq_LtE 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -31,7 +31,7 @@
+         log.error("Could not find git - is it installed and on your path?")
+         raise Abort('Deployment Aborted!')
+     proc.communicate()
+-    return proc.wait() == 0
++    return proc.wait() <= 0
+ 
+ 
+ def _get_current_sha(repo_path) -> str:
+============
+mkdocs\commands\gh_deploy.py core/ReplaceComparisonOperator_Lt_NotEq 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -88,7 +88,7 @@
+             f'Previous deployment was done with MkDocs version {previousv}; '
+             f'you are deploying with a newer version ({currentv})'
+         )
+-    elif currentv < previousv:
++    elif currentv != previousv:
+         log.error(
+             f'Deployment terminated: Previous deployment was made with MkDocs version {previousv}; '
+             f'you are attempting to deploy with an older version ({currentv}). Use --ignore-version '
+============
+mkdocs\commands\gh_deploy.py core/AddNot 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -12,7 +12,7 @@
+ import mkdocs
+ from mkdocs.exceptions import Abort
+ 
+-if TYPE_CHECKING:
++if not TYPE_CHECKING:
+     from mkdocs.config.defaults import MkDocsConfig
+ 
+ log = logging.getLogger(__name__)
+============
+mkdocs\commands\gh_deploy.py core/ReplaceOrWithAnd 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -37,7 +37,7 @@
+ def _get_current_sha(repo_path) -> str:
+     proc = subprocess.Popen(
+         ['git', 'rev-parse', '--short', 'HEAD'],
+-        cwd=repo_path or None,
++        cwd=repo_path and None,
+         stdout=subprocess.PIPE,
+         stderr=subprocess.PIPE,
+     )
+============
+mkdocs\commands\gh_deploy.py core/ReplaceOrWithAnd 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -158,7 +158,7 @@
+ 
+     host, path = _get_remote_url(remote_name)
+ 
+-    if host is None or path is None:
++    if host is None and path is None:
+         # This could be a GitHub Enterprise deployment.
+         log.info('Your documentation should be available shortly.')
+     else:
+============
+mkdocs\commands\gh_deploy.py core/ExceptionReplacer 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -27,7 +27,7 @@
+             stdout=subprocess.PIPE,
+             stderr=subprocess.PIPE,
+         )
+-    except FileNotFoundError:
++    except CosmicRayTestingException:
+         log.error("Could not find git - is it installed and on your path?")
+         raise Abort('Deployment Aborted!')
+     proc.communicate()
+============
+mkdocs\commands\gh_deploy.py core/NumberReplacer 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -61,7 +61,7 @@
+     url = stdout.decode('utf-8').strip()
+ 
+     if 'github.com/' in url:
+-        host, path = url.split('github.com/', 1)
++        host, path = url.split('github.com/', 2)
+     elif 'github.com:' in url:
+         host, path = url.split('github.com:', 1)
+     else:
+============
+mkdocs\commands\gh_deploy.py core/NumberReplacer 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -63,7 +63,7 @@
+     if 'github.com/' in url:
+         host, path = url.split('github.com/', 1)
+     elif 'github.com:' in url:
+-        host, path = url.split('github.com:', 1)
++        host, path = url.split('github.com:', 2)
+     else:
+         return None, None
+     return host, path
+============
+mkdocs\commands\gh_deploy.py core/NumberReplacer 6
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\commands\gh_deploy.py
++++ b/mkdocs\commands\gh_deploy.py
+@@ -162,7 +162,7 @@
+         # This could be a GitHub Enterprise deployment.
+         log.info('Your documentation should be available shortly.')
+     else:
+-        username, repo = path.split('/', 1)
++        username, repo = path.split('/', 2)
+         if repo.endswith('.git'):
+             repo = repo[: -len('.git')]
+         url = f'https://{username}.github.io/{repo}/'
+============
+total jobs: 90
+complete: 90 (100.00%)
+surviving mutants: 33 (36.67%)

@@ -1,0 +1,5 @@
+File                             Mutants  Killed  Survived  Other    Score
+mkdocs/commands/gh_deploy.py          90      34        56      0    37.8%
+mkdocs/utils/meta.py                  36      26        10      0    72.2%
+mkdocs/structure/toc.py               44      41         3      0    93.2%
+TOTAL                                170     101        69      0    59.4%

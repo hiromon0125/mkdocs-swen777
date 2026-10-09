@@ -1,0 +1,8 @@
+# cosmic-ray configuration for mkdocs/commands/gh_deploy.py
+[cosmic-ray]
+module-path = "mkdocs/commands/gh_deploy.py"
+timeout = 60.0
+test-command = "python -m pytest -x -o python_files=*_tests.py mkdocs/tests/gh_deploy_tests.py courseProjectCode/mutation-testing/mutation_gh_deploy_tests.py"
+
+[cosmic-ray.distributor]
+name = "local"
