@@ -18,6 +18,6 @@ test_first_top_level_item_is_marked_active (mutation_toc_tests.TocActiveFlagTest
 Only the first top-level entry is marked active, and the flag is exactly ``True``. ... ok
 
 ----------------------------------------------------------------------
-Ran 9 tests in 0.007s
+Ran 9 tests in 0.006s
 
 OK

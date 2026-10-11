@@ -4,7 +4,7 @@ How to run the mutation tests and the added unit tests. Works on Windows, macOS,
 
 ## Prerequisites
 
-- Python 3.10 or newer (the recorded run used Python 3.13)
+- Python 3.9 or newer to run mutation testing (cosmic-ray needs 3.9+). The new tests on their own also run on Python 3.8, the oldest version MkDocs supports. The recorded environment is listed in `report.md`.
 - Run all commands from the repository root
 - Install the package, cosmic-ray, and pytest (cosmic-ray runs the tests through pytest):
 
@@ -35,6 +35,8 @@ python3 -m pip install cosmic-ray==8.7.0 pytest
 | `meta.toml` | `mkdocs/utils/meta.py` |
 | `toc.toml` | `mkdocs/structure/toc.py` |
 
+The new tests live in `courseProjectCode/`, not `mkdocs/tests/`, so MkDocs' own test command (`python -m unittest discover -s mkdocs -p "*tests.py"`) and its CI do not run them. They run only through the commands below. We kept them outside `mkdocs/` so that no MkDocs code or tests were changed, as in our earlier assignments.
+
 ## Run only the added tests
 
 ```sh
@@ -51,8 +53,8 @@ python courseProjectDocs/mutation-testing/run_mutation.py
 
 This takes about 5 minutes. It runs cosmic-ray on all three files twice and writes the results to `courseProjectDocs/mutation-testing/results/`:
 
-1. **Initial:** existing MkDocs tests only. The script sets `PYTEST_ADDOPTS='-k "not mutation_"'`, which deselects our new test files, so this reproduces the score from before we added any tests.
-2. **Final:** existing MkDocs tests plus our new tests.
+1. **Initial:** existing MkDocs tests only. The script uses a temporary copy of each config with our new test file removed from its `test-command`, so this reproduces the score from before we added any tests.
+2. **Final:** existing MkDocs tests plus our new tests. After this run, the script also runs the 9 new tests and saves the output to `results/testResults.txt`.
 
 To run one phase, add `initial` or `final`, for example `python courseProjectDocs/mutation-testing/run_mutation.py final`.
 
@@ -62,6 +64,8 @@ Expected totals:
 == initial ==   TOTAL  170  101  69  0  59.4%
 == final ==     TOTAL  170  132  38  0  77.6%
 ```
+
+The script exits with a non-zero code if a cosmic-ray step fails, if any mutant doesn't finish, or if one of the new tests fails.
 
 cosmic-ray edits the source file for each mutant and restores it afterwards. If you stop a run partway (Ctrl+C), run `git status`; if anything under `mkdocs/` shows as modified, restore it with `git restore mkdocs`.
 
@@ -75,7 +79,7 @@ Written by `run_mutation.py` into `results/`:
 | `results/initial/summary.txt`, `results/final/summary.txt` | Per-file mutant counts and mutation score |
 | `results/<phase>/<file>-report.txt` | Every mutant with its outcome (killed / survived) and diff |
 | `results/<phase>/<file>-survivors.txt` | Only the surviving mutants, with diffs |
-| `results/testResults.txt` | `unittest` output for the 9 added tests (3 per team member) |
+| `results/testResults.txt` | `unittest` output for the 9 added tests (written by the final run) |
 
 Other files in this folder:
 

@@ -46,8 +46,12 @@ deploy commit with the MkDocs version running now."""
         Kills the mutants that turn ``>`` into ``>=`` (would log an upgrade)
         and ``<`` into ``<=`` or ``is not`` (would abort).
         """
-        with self.assertNoLogs(LOGGER, level='DEBUG'):
+        # Replace gh_deploy's logger with a mock and check nothing was logged.
+        # (assertNoLogs would be simpler but needs Python 3.10; MkDocs supports 3.8+.)
+        with mock.patch.object(gh_deploy, 'log') as log:
             self._run('Deployed abc with MkDocs version: 2.0.0')
+
+        self.assertEqual(log.method_calls, [])
 
     def test_uppercase_prerelease_is_parsed_case_insensitively(self):
         """``2.0.0RC1`` must be read as ``2.0.0rc1``, which is older than ``2.0.0``.

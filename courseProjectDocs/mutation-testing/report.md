@@ -17,17 +17,17 @@ MkDocs had no mutation testing set up. There is no mutmut, cosmic-ray, or simila
 | Added tests | `courseProjectCode/mutation-testing/mutation_{gh_deploy,meta,toc}_tests.py` |
 | Run script | `courseProjectDocs/mutation-testing/run_mutation.py` |
 | Report location | `courseProjectDocs/mutation-testing/results/{initial,final}/` |
-| Recorded environment | Windows, Python 3.x |
+| Recorded environment | Windows, Python 3.12.4 |
 
 **Why cosmic-ray.** Our team works on Windows. mutmut, the other common Python mutation tool, needs `fork()` and refuses to start on native Windows. cosmic-ray runs each mutant's tests in an ordinary subprocess, so it works the same on Windows, macOS, and Linux.
 
 **How it works.** For each mutant, cosmic-ray edits the file under test, runs the config's `test-command`, and restores the file. A mutant is killed if the tests fail. Each config's `test-command` runs pytest on the existing MkDocs tests for that file plus the new test file, with `-o python_files=*_tests.py` to match MkDocs' test file naming. No existing MkDocs file was modified.
 
-**Reproducing the initial score.** For the initial run, `run_mutation.py` sets `PYTEST_ADDOPTS='-k "not mutation_"'`, which deselects our new test files. This gives the score from before our tests were added, from the same commit and configs.
+**Reproducing the initial score.** For the initial run, `run_mutation.py` uses a temporary copy of each config with our new test file removed from its `test-command`, so exactly the existing MkDocs tests run. This gives the score from before our tests were added, from the same commit and configs.
 
 ## Mutation scores
 
-Mutation score = killed mutants / total mutants. cosmic-ray generated 170 mutants across the three files. There were no timeouts or incompetent mutants.
+Mutation score = killed mutants / total mutants. A mutant whose tests time out counts as killed. A mutant cosmic-ray reports as "incompetent" (the test command itself could not run) is listed under Other and counts as not killed. `run_mutation.py` stops with an error if any mutant didn't finish. cosmic-ray generated 170 mutants across the three files, and all of them were either killed or survived (no timeouts or incompetent mutants).
 
 ### Initial (existing MkDocs tests only)
 
@@ -49,14 +49,16 @@ Mutation score = killed mutants / total mutants. cosmic-ray generated 170 mutant
 
 ### Change
 
-31 of the 38 final survivors are **equivalent mutants**. They don't change the program's behavior, so no test can kill them (see the analysis below). The other 7 are in `gh_deploy.py` and could be killed with more tests. Each team member's three tests were chosen to kill as many surviving mutants as possible. Excluding equivalent mutants gives the score over the 139 mutants that can be killed.
+31 of the 38 final survivors are **equivalent mutants**. They don't change the program's behavior, so no test can kill them (see the analysis below). One of them, the `is ''` mutant in `meta.py`, is only equivalent on CPython. The other 7 are in `gh_deploy.py` and could be killed with more tests. Each team member's three tests were chosen to kill as many surviving mutants as possible. Excluding equivalent mutants gives the score over the 139 mutants that can be killed.
 
 | File | Initial | Final | Change | Newly killed | Equivalent | Final score excluding equivalent |
 |---|---:|---:|---:|---:|---:|---:|
 | `gh_deploy.py` | 37.8% | 63.3% | +25.5 pts | 23 | 26 | 57 / 64 = 89.1% |
-| `meta.py` | 72.2% | 86.1% | +13.9 pts | 5 | 5 | 31 / 31 = 100% |
+| `meta.py` | 72.2% | 86.1% | +13.9 pts | 5 | 5 | 31 / 31 = 100%\* |
 | `toc.py` | 93.2% | 100.0% | +6.8 pts | 3 | 0 | 44 / 44 = 100% |
-| **Total** | **59.4%** | **77.6%** | **+18.2 pts** | **31** | **31** | **132 / 139 = 95.0%** |
+| **Total** | **59.4%** | **77.6%** | **+18.2 pts** | **31** | **31** | **132 / 139 = 95.0%\*** |
+
+\* On CPython, which is what we ran. On an interpreter where the `is ''` mutant can be killed (such as PyPy, which MkDocs also tests on), it is not equivalent, so `meta.py` would be 31 / 32 = 96.9% and the total 132 / 140 = 94.3%.
 
 Raw results: [`results/initial/summary.txt`](results/initial/summary.txt) and [`results/final/summary.txt`](results/final/summary.txt). Every mutant's outcome and diff is in `<file>-report.txt`, and survivors only are in `<file>-survivors.txt`.
 
@@ -106,13 +108,13 @@ The other 7 could be killed, but each would need its own extra test and kills on
 | `ReplaceComparisonOperator_Eq_Lt` | `line.strip() == ''` → `< ''` (blank lines no longer end the metadata) | `test_whitespace_only_line_ends_metadata` |
 | `ExceptionReplacer` | `except ImportError` around `from yaml import CSafeLoader` replaced (meta.py can't be imported without libyaml) | `test_falls_back_to_pure_python_loader_without_libyaml` swaps in a `yaml` module without `CSafeLoader` and re-imports meta.py |
 
-**Remaining 5 survivors (all equivalent):**
+**Remaining 5 survivors (equivalent; one only on CPython):**
 
 | Mutants | Why it's equivalent |
 |---|---|
 | `re.UNICODE \| re.DOTALL` → `+`, `^`, `-` | `+` and `^` give the same flag value. `-` gives `re.DOTALL` alone, which behaves the same because `re.UNICODE` is already the default for `str` patterns in Python 3. |
 | `line.strip() == ''` → `<= ''` | No string is less than `''`, so `<=` is true for exactly the same strings as `==` |
-| `line.strip() == ''` → `is ''` | CPython reuses a single empty-string object, so `strip()` of a blank line is always that same object |
+| `line.strip() == ''` → `is ''` | **Equivalent on CPython only.** CPython reuses a single empty-string object, so `strip()` of a blank line is always that same object. Python doesn't guarantee this, and on PyPy, which MkDocs also tests on, `strip()` can return a new empty string, so the mutant could be killed there. |
 
 ### `mkdocs/structure/toc.py`
 
@@ -139,5 +141,5 @@ Godson Umoren and Hiroto Takeuchi reviewed the work and the PR before it was mer
 | File | Initial → final score | New tests | Mutants killed |
 |---|---|---:|---:|
 | `mkdocs/commands/gh_deploy.py` | 37.8% → 63.3% (89.1% excluding equivalent) | 3 | 23 |
-| `mkdocs/utils/meta.py` | 72.2% → 86.1% (100% excluding equivalent) | 3 | 5 |
+| `mkdocs/utils/meta.py` | 72.2% → 86.1% (100% excluding equivalent, on CPython) | 3 | 5 |
 | `mkdocs/structure/toc.py` | 93.2% → 100.0% | 3 | 3 |
