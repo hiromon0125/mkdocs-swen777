@@ -1,0 +1,83 @@
+mkdocs\utils\meta.py core/ReplaceBinaryOperator_BitOr_Add 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -48,7 +48,7 @@
+ # Data Parser                                                       #
+ #####################################################################
+ 
+-YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE | re.DOTALL)
++YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE + re.DOTALL)
+ META_RE = re.compile(r'^[ ]{0,3}(?P<key>[A-Za-z0-9_-]+):\s*(?P<value>.*)')
+ META_MORE_RE = re.compile(r'^([ ]{4}|\t)(\s*)(?P<value>.*)')
+ 
+============
+mkdocs\utils\meta.py core/ReplaceBinaryOperator_BitOr_Sub 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -48,7 +48,7 @@
+ # Data Parser                                                       #
+ #####################################################################
+ 
+-YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE | re.DOTALL)
++YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE - re.DOTALL)
+ META_RE = re.compile(r'^[ ]{0,3}(?P<key>[A-Za-z0-9_-]+):\s*(?P<value>.*)')
+ META_MORE_RE = re.compile(r'^([ ]{4}|\t)(\s*)(?P<value>.*)')
+ 
+============
+mkdocs\utils\meta.py core/ReplaceBinaryOperator_BitOr_BitXor 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -48,7 +48,7 @@
+ # Data Parser                                                       #
+ #####################################################################
+ 
+-YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE | re.DOTALL)
++YAML_RE = re.compile(r'^-{3}[ \t]*\n(.*?\n)(?:\.{3}|-{3})[ \t]*\n', re.UNICODE ^ re.DOTALL)
+ META_RE = re.compile(r'^[ ]{0,3}(?P<key>[A-Za-z0-9_-]+):\s*(?P<value>.*)')
+ META_MORE_RE = re.compile(r'^([ ]{4}|\t)(\s*)(?P<value>.*)')
+ 
+============
+mkdocs\utils\meta.py core/ReplaceComparisonOperator_Eq_LtE 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -80,7 +80,7 @@
+     while lines:
+         line = lines.pop(0)
+ 
+-        if line.strip() == '':
++        if line.strip() <= '':
+             break  # blank line - done
+         if m1 := META_RE.match(line):
+             key = m1.group('key').lower().strip()
+============
+mkdocs\utils\meta.py core/ReplaceComparisonOperator_Eq_Is 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\utils\meta.py
++++ b/mkdocs\utils\meta.py
+@@ -80,7 +80,7 @@
+     while lines:
+         line = lines.pop(0)
+ 
+-        if line.strip() == '':
++        if line.strip() is '':
+             break  # blank line - done
+         if m1 := META_RE.match(line):
+             key = m1.group('key').lower().strip()
+============
+total jobs: 36
+complete: 36 (100.00%)
+surviving mutants: 5 (13.89%)

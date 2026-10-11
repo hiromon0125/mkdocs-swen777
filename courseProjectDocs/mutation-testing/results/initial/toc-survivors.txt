@@ -1,0 +1,51 @@
+mkdocs\structure\toc.py core/AddNot 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -20,7 +20,7 @@
+ def get_toc(toc_tokens: list[_TocToken]) -> TableOfContents:
+     toc = [_parse_toc_token(i) for i in toc_tokens]
+     # For the table of contents, always mark the first element as active
+-    if len(toc):
++    if not len(toc):
+         toc[0].active = True  # type: ignore[attr-defined]
+     return TableOfContents(toc)
+ 
+============
+mkdocs\structure\toc.py core/ReplaceTrueWithFalse 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -21,7 +21,7 @@
+     toc = [_parse_toc_token(i) for i in toc_tokens]
+     # For the table of contents, always mark the first element as active
+     if len(toc):
+-        toc[0].active = True  # type: ignore[attr-defined]
++        toc[0].active = False  # type: ignore[attr-defined]
+     return TableOfContents(toc)
+ 
+ 
+============
+mkdocs\structure\toc.py core/NumberReplacer 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.SURVIVED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -21,7 +21,7 @@
+     toc = [_parse_toc_token(i) for i in toc_tokens]
+     # For the table of contents, always mark the first element as active
+     if len(toc):
+-        toc[0].active = True  # type: ignore[attr-defined]
++        toc[ -1].active = True  # type: ignore[attr-defined]
+     return TableOfContents(toc)
+ 
+ 
+============
+total jobs: 44
+complete: 44 (100.00%)
+surviving mutants: 3 (6.82%)

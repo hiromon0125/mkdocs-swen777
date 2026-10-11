@@ -1,0 +1,707 @@
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_Sub 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -38,7 +38,7 @@
+     @property
+     def url(self) -> str:
+         """The hash fragment of a URL pointing to the item."""
+-        return '#' + self.id
++        return '#' - self.id
+ 
+     level: int
+     """The zero-based level of the item."""
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_Sub 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -53,7 +53,7 @@
+         indent = '    ' * depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+-            ret += item.indent_print(depth + 1)
++            ret += item.indent_print(depth - 1)
+         return ret
+ 
+ 
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_Mul 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -38,7 +38,7 @@
+     @property
+     def url(self) -> str:
+         """The hash fragment of a URL pointing to the item."""
+-        return '#' + self.id
++        return '#' * self.id
+ 
+     level: int
+     """The zero-based level of the item."""
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_Mul 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -53,7 +53,7 @@
+         indent = '    ' * depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+-            ret += item.indent_print(depth + 1)
++            ret += item.indent_print(depth * 1)
+         return ret
+ 
+ 
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_Div 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -38,7 +38,7 @@
+     @property
+     def url(self) -> str:
+         """The hash fragment of a URL pointing to the item."""
+-        return '#' + self.id
++        return '#' / self.id
+ 
+     level: int
+     """The zero-based level of the item."""
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_Div 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -53,7 +53,7 @@
+         indent = '    ' * depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+-            ret += item.indent_print(depth + 1)
++            ret += item.indent_print(depth / 1)
+         return ret
+ 
+ 
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_FloorDiv 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -38,7 +38,7 @@
+     @property
+     def url(self) -> str:
+         """The hash fragment of a URL pointing to the item."""
+-        return '#' + self.id
++        return '#' // self.id
+ 
+     level: int
+     """The zero-based level of the item."""
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_FloorDiv 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -53,7 +53,7 @@
+         indent = '    ' * depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+-            ret += item.indent_print(depth + 1)
++            ret += item.indent_print(depth // 1)
+         return ret
+ 
+ 
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_Mod 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -38,7 +38,7 @@
+     @property
+     def url(self) -> str:
+         """The hash fragment of a URL pointing to the item."""
+-        return '#' + self.id
++        return '#' % self.id
+ 
+     level: int
+     """The zero-based level of the item."""
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_Mod 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -53,7 +53,7 @@
+         indent = '    ' * depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+-            ret += item.indent_print(depth + 1)
++            ret += item.indent_print(depth % 1)
+         return ret
+ 
+ 
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_Pow 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -38,7 +38,7 @@
+     @property
+     def url(self) -> str:
+         """The hash fragment of a URL pointing to the item."""
+-        return '#' + self.id
++        return '#' ** self.id
+ 
+     level: int
+     """The zero-based level of the item."""
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_Pow 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -53,7 +53,7 @@
+         indent = '    ' * depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+-            ret += item.indent_print(depth + 1)
++            ret += item.indent_print(depth ** 1)
+         return ret
+ 
+ 
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_RShift 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -38,7 +38,7 @@
+     @property
+     def url(self) -> str:
+         """The hash fragment of a URL pointing to the item."""
+-        return '#' + self.id
++        return '#' >> self.id
+ 
+     level: int
+     """The zero-based level of the item."""
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_RShift 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -53,7 +53,7 @@
+         indent = '    ' * depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+-            ret += item.indent_print(depth + 1)
++            ret += item.indent_print(depth >> 1)
+         return ret
+ 
+ 
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_LShift 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -38,7 +38,7 @@
+     @property
+     def url(self) -> str:
+         """The hash fragment of a URL pointing to the item."""
+-        return '#' + self.id
++        return '#' << self.id
+ 
+     level: int
+     """The zero-based level of the item."""
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_LShift 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -53,7 +53,7 @@
+         indent = '    ' * depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+-            ret += item.indent_print(depth + 1)
++            ret += item.indent_print(depth << 1)
+         return ret
+ 
+ 
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_BitOr 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -38,7 +38,7 @@
+     @property
+     def url(self) -> str:
+         """The hash fragment of a URL pointing to the item."""
+-        return '#' + self.id
++        return '#' | self.id
+ 
+     level: int
+     """The zero-based level of the item."""
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_BitOr 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -53,7 +53,7 @@
+         indent = '    ' * depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+-            ret += item.indent_print(depth + 1)
++            ret += item.indent_print(depth | 1)
+         return ret
+ 
+ 
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_BitAnd 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -38,7 +38,7 @@
+     @property
+     def url(self) -> str:
+         """The hash fragment of a URL pointing to the item."""
+-        return '#' + self.id
++        return '#' & self.id
+ 
+     level: int
+     """The zero-based level of the item."""
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_BitAnd 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -53,7 +53,7 @@
+         indent = '    ' * depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+-            ret += item.indent_print(depth + 1)
++            ret += item.indent_print(depth & 1)
+         return ret
+ 
+ 
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_BitXor 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -38,7 +38,7 @@
+     @property
+     def url(self) -> str:
+         """The hash fragment of a URL pointing to the item."""
+-        return '#' + self.id
++        return '#' ^ self.id
+ 
+     level: int
+     """The zero-based level of the item."""
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Add_BitXor 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -53,7 +53,7 @@
+         indent = '    ' * depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+-            ret += item.indent_print(depth + 1)
++            ret += item.indent_print(depth ^ 1)
+         return ret
+ 
+ 
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Mul_Add 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -50,7 +50,7 @@
+         return self.indent_print()
+ 
+     def indent_print(self, depth: int = 0) -> str:
+-        indent = '    ' * depth
++        indent = '    ' + depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+             ret += item.indent_print(depth + 1)
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Mul_Sub 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -50,7 +50,7 @@
+         return self.indent_print()
+ 
+     def indent_print(self, depth: int = 0) -> str:
+-        indent = '    ' * depth
++        indent = '    ' - depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+             ret += item.indent_print(depth + 1)
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Mul_Div 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -50,7 +50,7 @@
+         return self.indent_print()
+ 
+     def indent_print(self, depth: int = 0) -> str:
+-        indent = '    ' * depth
++        indent = '    ' / depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+             ret += item.indent_print(depth + 1)
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Mul_FloorDiv 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -50,7 +50,7 @@
+         return self.indent_print()
+ 
+     def indent_print(self, depth: int = 0) -> str:
+-        indent = '    ' * depth
++        indent = '    ' // depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+             ret += item.indent_print(depth + 1)
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Mul_Mod 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -50,7 +50,7 @@
+         return self.indent_print()
+ 
+     def indent_print(self, depth: int = 0) -> str:
+-        indent = '    ' * depth
++        indent = '    ' % depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+             ret += item.indent_print(depth + 1)
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Mul_Pow 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -50,7 +50,7 @@
+         return self.indent_print()
+ 
+     def indent_print(self, depth: int = 0) -> str:
+-        indent = '    ' * depth
++        indent = '    ' ** depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+             ret += item.indent_print(depth + 1)
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Mul_RShift 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -50,7 +50,7 @@
+         return self.indent_print()
+ 
+     def indent_print(self, depth: int = 0) -> str:
+-        indent = '    ' * depth
++        indent = '    ' >> depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+             ret += item.indent_print(depth + 1)
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Mul_LShift 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -50,7 +50,7 @@
+         return self.indent_print()
+ 
+     def indent_print(self, depth: int = 0) -> str:
+-        indent = '    ' * depth
++        indent = '    ' << depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+             ret += item.indent_print(depth + 1)
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Mul_BitOr 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -50,7 +50,7 @@
+         return self.indent_print()
+ 
+     def indent_print(self, depth: int = 0) -> str:
+-        indent = '    ' * depth
++        indent = '    ' | depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+             ret += item.indent_print(depth + 1)
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Mul_BitAnd 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -50,7 +50,7 @@
+         return self.indent_print()
+ 
+     def indent_print(self, depth: int = 0) -> str:
+-        indent = '    ' * depth
++        indent = '    ' & depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+             ret += item.indent_print(depth + 1)
+============
+mkdocs\structure\toc.py core/ReplaceBinaryOperator_Mul_BitXor 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -50,7 +50,7 @@
+         return self.indent_print()
+ 
+     def indent_print(self, depth: int = 0) -> str:
+-        indent = '    ' * depth
++        indent = '    ' ^ depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+             ret += item.indent_print(depth + 1)
+============
+mkdocs\structure\toc.py core/AddNot 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -20,7 +20,7 @@
+ def get_toc(toc_tokens: list[_TocToken]) -> TableOfContents:
+     toc = [_parse_toc_token(i) for i in toc_tokens]
+     # For the table of contents, always mark the first element as active
+-    if len(toc):
++    if not len(toc):
+         toc[0].active = True  # type: ignore[attr-defined]
+     return TableOfContents(toc)
+ 
+============
+mkdocs\structure\toc.py core/ReplaceTrueWithFalse 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -21,7 +21,7 @@
+     toc = [_parse_toc_token(i) for i in toc_tokens]
+     # For the table of contents, always mark the first element as active
+     if len(toc):
+-        toc[0].active = True  # type: ignore[attr-defined]
++        toc[0].active = False  # type: ignore[attr-defined]
+     return TableOfContents(toc)
+ 
+ 
+============
+mkdocs\structure\toc.py core/NumberReplacer 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -21,7 +21,7 @@
+     toc = [_parse_toc_token(i) for i in toc_tokens]
+     # For the table of contents, always mark the first element as active
+     if len(toc):
+-        toc[0].active = True  # type: ignore[attr-defined]
++        toc[ 1].active = True  # type: ignore[attr-defined]
+     return TableOfContents(toc)
+ 
+ 
+============
+mkdocs\structure\toc.py core/NumberReplacer 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -21,7 +21,7 @@
+     toc = [_parse_toc_token(i) for i in toc_tokens]
+     # For the table of contents, always mark the first element as active
+     if len(toc):
+-        toc[0].active = True  # type: ignore[attr-defined]
++        toc[ -1].active = True  # type: ignore[attr-defined]
+     return TableOfContents(toc)
+ 
+ 
+============
+mkdocs\structure\toc.py core/NumberReplacer 2
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -49,7 +49,7 @@
+     def __str__(self) -> str:
+         return self.indent_print()
+ 
+-    def indent_print(self, depth: int = 0) -> str:
++    def indent_print(self, depth: int = 1) -> str:
+         indent = '    ' * depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+============
+mkdocs\structure\toc.py core/NumberReplacer 3
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -49,7 +49,7 @@
+     def __str__(self) -> str:
+         return self.indent_print()
+ 
+-    def indent_print(self, depth: int = 0) -> str:
++    def indent_print(self, depth: int = -1) -> str:
+         indent = '    ' * depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+============
+mkdocs\structure\toc.py core/NumberReplacer 4
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -53,7 +53,7 @@
+         indent = '    ' * depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+-            ret += item.indent_print(depth + 1)
++            ret += item.indent_print(depth + 2)
+         return ret
+ 
+ 
+============
+mkdocs\structure\toc.py core/NumberReplacer 5
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -53,7 +53,7 @@
+         indent = '    ' * depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+         for item in self.children:
+-            ret += item.indent_print(depth + 1)
++            ret += item.indent_print(depth + 0)
+         return ret
+ 
+ 
+============
+mkdocs\structure\toc.py core/RemoveDecorator 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -34,8 +34,6 @@
+ 
+     title: str
+     """The text of the item, as HTML."""
+-
+-    @property
+     def url(self) -> str:
+         """The hash fragment of a URL pointing to the item."""
+         return '#' + self.id
+============
+mkdocs\structure\toc.py core/ZeroIterationForLoop 0
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -52,7 +52,7 @@
+     def indent_print(self, depth: int = 0) -> str:
+         indent = '    ' * depth
+         ret = f'{indent}{self.title} - {self.url}\n'
+-        for item in self.children:
++        for item in []:
+             ret += item.indent_print(depth + 1)
+         return ret
+ 
+============
+mkdocs\structure\toc.py core/ZeroIterationForLoop 1
+worker outcome: WorkerOutcome.NORMAL, test outcome: TestOutcome.KILLED
+=== DIFF ===
+--- mutation diff ---
+--- a/mkdocs\structure\toc.py
++++ b/mkdocs\structure\toc.py
+@@ -75,7 +75,7 @@
+ 
+ def _parse_toc_token(token: _TocToken) -> AnchorLink:
+     anchor = AnchorLink(token['name'], token['id'], token['level'])
+-    for i in token['children']:
++    for i in []:
+         anchor.children.append(_parse_toc_token(i))
+     return anchor
+ 
+============
+total jobs: 44
+complete: 44 (100.00%)
+surviving mutants: 0 (0.00%)

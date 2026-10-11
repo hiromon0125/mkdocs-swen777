@@ -1,0 +1,8 @@
+# cosmic-ray configuration for mkdocs/utils/meta.py
+[cosmic-ray]
+module-path = "mkdocs/utils/meta.py"
+timeout = 60.0
+test-command = "python -m pytest -x -o python_files=*_tests.py mkdocs/tests/utils/utils_tests.py::UtilsTests::test_mm_meta_data mkdocs/tests/utils/utils_tests.py::UtilsTests::test_mm_meta_data_blank_first_line mkdocs/tests/utils/utils_tests.py::UtilsTests::test_yaml_meta_data mkdocs/tests/utils/utils_tests.py::UtilsTests::test_yaml_meta_data_not_dict mkdocs/tests/utils/utils_tests.py::UtilsTests::test_yaml_meta_data_invalid mkdocs/tests/utils/utils_tests.py::UtilsTests::test_no_meta_data courseProjectCode/mutation-testing/mutation_meta_tests.py"
+
+[cosmic-ray.distributor]
+name = "local"
