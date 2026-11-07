@@ -1,0 +1,16 @@
+F
+======================================================================
+FAIL: test_loading_hooks_does_not_retain_option (mkdocs.tests.config.config_options_tests.HooksTest.test_loading_hooks_does_not_retain_option)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/tests/base.py", line 80, in wrapper
+    return fn(self, td, *args)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/tests/config/config_options_tests.py", line 2363, in test_loading_hooks_does_not_retain_option
+    self.assertIsNone(option_ref())
+AssertionError: <mkdocs.config.config_options.Hooks object at 0x1085de450> is not None
+
+----------------------------------------------------------------------
+Ran 1 test in 0.006s
+
+FAILED (failures=1)

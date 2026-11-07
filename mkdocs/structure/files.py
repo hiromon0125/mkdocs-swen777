@@ -98,7 +98,9 @@ class Files:
         """Add file to the Files collection."""
         if file.src_uri in self._src_uris:
             warnings.warn(
-                "To replace an existing file, call `remove` before `append`.", DeprecationWarning
+                "To replace an existing file, call `remove` before `append`.",
+                DeprecationWarning,
+                stacklevel=2,
             )
             del self._src_uris[file.src_uri]
         self._src_uris[file.src_uri] = file
@@ -107,8 +109,8 @@ class Files:
         """Remove file from Files collection."""
         try:
             del self._src_uris[file.src_uri]
-        except KeyError:
-            raise ValueError(f'{file.src_uri!r} not in collection')
+        except KeyError as e:
+            raise ValueError(f'{file.src_uri!r} not in collection') from e
 
     def copy_static_files(
         self,

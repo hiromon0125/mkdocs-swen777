@@ -1,0 +1,32 @@
+.................................FF......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................s..................................................s................s...............s........................................................................................................................
+======================================================================
+FAIL: test_draft_docs_with_comments_from_user_guide (tests.build_tests.BuildTests.test_draft_docs_with_comments_from_user_guide) (serve_url=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/tests/build_tests.py", line 606, in test_draft_docs_with_comments_from_user_guide
+    self.assertPathNotExists(site_dir, 'other_unpublished.html')
+  File "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/tests/base.py", line 117, in assertPathNotExists
+    raise self.failureException(msg)
+AssertionError: The path '/var/folders/nc/38m5j2bn1zx3_br7qr78xyrc0000gn/T/mkdocs_test-hfs3gy_9/other_unpublished.html' does exist
+
+======================================================================
+FAIL: test_draft_docs_with_comments_from_user_guide (tests.build_tests.BuildTests.test_draft_docs_with_comments_from_user_guide) (serve_url='http://localhost:123/documentation/')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/tests/build_tests.py", line 616, in test_draft_docs_with_comments_from_user_guide
+    with self._assert_build_logs(expected_logs):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.12/Frameworks/Python.framework/Versions/3.12/lib/python3.12/contextlib.py", line 144, in __exit__
+    next(self.gen)
+  File "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/tests/build_tests.py", line 572, in _assert_build_logs
+    self.assertEqual('\n'.join(msgs), textwrap.dedent(expected).strip('\n'))
+AssertionError: '' != 'INFO:The following pages are being built only for the preview but will be excluded from `mkdocs build` per `draft_docs` config:\n  - http://localhost:123/documentation/other_unpublished.html\n  - http://localhost:123/documentation/test/other_unpublished.html'
++ INFO:The following pages are being built only for the preview but will be excluded from `mkdocs build` per `draft_docs` config:
++   - http://localhost:123/documentation/other_unpublished.html
++   - http://localhost:123/documentation/test/other_unpublished.html
+
+
+----------------------------------------------------------------------
+Ran 725 tests in 9.578s
+
+FAILED (failures=2, skipped=4)

@@ -136,7 +136,7 @@ class Theme(MutableMapping[str, Any]):
             raise ValidationError(
                 f"The theme '{name}' does not appear to have a configuration file. "
                 f"Please upgrade to a current version of the theme."
-            )
+            ) from e
 
         if theme_config is None:
             theme_config = {}

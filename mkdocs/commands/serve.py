@@ -22,7 +22,7 @@ def serve(
     livereload: bool = True,
     build_type: str | None = None,
     watch_theme: bool = False,
-    watch: list[str] = [],
+    watch: list[str] | None = None,
     *,
     open_in_browser: bool = False,
     **kwargs,
@@ -34,6 +34,9 @@ def serve(
     it will rebuild the documentation and refresh the page automatically
     whenever a file is edited.
     """
+    if watch is None:
+        watch = []
+
     # Create a temporary build directory, and set some options to serve it
     site_dir = tempfile.mkdtemp(prefix='mkdocs_')
 

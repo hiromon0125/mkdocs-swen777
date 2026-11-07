@@ -39,7 +39,7 @@ def parse_locale(locale: str) -> Locale:
     try:
         return Locale.parse(locale, sep='_')
     except (ValueError, UnknownLocaleError, TypeError) as e:
-        raise ValidationError(f'Invalid value for locale: {e}')
+        raise ValidationError(f'Invalid value for locale: {e}') from e
 
 
 def install_translations(

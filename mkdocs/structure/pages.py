@@ -221,7 +221,9 @@ class Page(StructureItem):
 
     def _set_title(self) -> None:
         warnings.warn(
-            "_set_title is no longer used in MkDocs and will be removed soon.", DeprecationWarning
+            "_set_title is no longer used in MkDocs and will be removed soon.",
+            DeprecationWarning,
+            stacklevel=2,
         )
 
     @weak_property

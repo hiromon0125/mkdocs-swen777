@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import contextlib
 import copy
+import gc
 import io
 import logging
 import os
@@ -9,6 +10,7 @@ import re
 import sys
 import textwrap
 import unittest
+import weakref
 from typing import TYPE_CHECKING, Any, Dict, List, Optional, TypeVar, Union
 from unittest import mock
 
@@ -2344,6 +2346,53 @@ class HooksTest(TestCase):
     class Schema(Config):
         plugins = c.Plugins(default=[])
         hooks = c.Hooks('plugins')
+
+    @tempdir()
+    def test_loading_hooks_does_not_retain_option(self, src_dir) -> None:
+        name = 'retention_hook.py'
+        write_file(b'value = 42', os.path.join(src_dir, name))
+        self.addCleanup(sys.modules.pop, name, None)
+        option = c.Hooks('plugins')
+        config = self.Schema(config_file_path=os.path.join(src_dir, 'mkdocs.yml'))
+        option.pre_validation(config, 'hooks')
+        option.validate([name])
+
+        option_ref = weakref.ref(option)
+        del option
+        gc.collect()
+        self.assertIsNone(option_ref())
+
+    @tempdir()
+    def test_hook_reused_across_config_reloads(self, src_dir) -> None:
+        name = 'reused_hook.py'
+        write_file(b'value = object()', os.path.join(src_dir, name))
+        self.addCleanup(sys.modules.pop, name, None)
+        config_path = os.path.join(src_dir, 'mkdocs.yml')
+
+        first = self.get_config(self.Schema, {'hooks': [name]}, config_file_path=config_path)
+        second = self.get_config(self.Schema, {'hooks': [name]}, config_file_path=config_path)
+
+        self.assertIs(first.plugins[name], second.plugins[name])
+
+    @tempdir()
+    def test_same_hook_name_in_different_projects(self, src_dir) -> None:
+        name = 'project_hook.py'
+        self.addCleanup(sys.modules.pop, name, None)
+        for project, content in [('first', b'value = 1'), ('second', b'value = 2')]:
+            write_file(content, os.path.join(src_dir, project, name))
+
+        first = self.get_config(
+            self.Schema,
+            {'hooks': [name]},
+            config_file_path=os.path.join(src_dir, 'first', 'mkdocs.yml'),
+        )
+        second = self.get_config(
+            self.Schema,
+            {'hooks': [name]},
+            config_file_path=os.path.join(src_dir, 'second', 'mkdocs.yml'),
+        )
+
+        self.assertIsNot(first.plugins[name], second.plugins[name])
 
     @tempdir()
     def test_hooks(self, src_dir) -> None:
