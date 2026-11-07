@@ -1658,6 +1658,16 @@ class NestedSubConfigTest(TestCase):
 
 
 class MarkdownExtensionsTest(TestCase):
+    def test_mapping_default_preserves_extension_options(self) -> None:
+        class Schema(Config):
+            markdown_extensions = c.MarkdownExtensions(default={'toc': {'title': 'Contents'}})
+            mdx_configs = c.Private[Dict[str, dict]]()
+
+        conf = self.get_config(Schema, {})
+
+        self.assertEqual(conf.markdown_extensions, ['toc'])
+        self.assertEqual(conf.mdx_configs, {'toc': {'title': 'Contents'}})
+
     @mock.patch('markdown.Markdown', mock.Mock())
     def test_simple_list(self) -> None:
         class Schema(Config):

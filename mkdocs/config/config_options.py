@@ -971,10 +971,14 @@ class MarkdownExtensions(OptionallyRequired[List[str]]):
         self,
         builtins: list[str] | None = None,
         configkey: str = 'mdx_configs',
-        default: Sequence[str] | None = (),
+        default: Sequence[str] | dict[str, dict | None] | None = (),
         **kwargs,
     ) -> None:
-        super().__init__(default=list(default) if default is not None else None, **kwargs)
+        if isinstance(default, dict):
+            default = default.copy()
+        elif default is not None:
+            default = list(default)
+        super().__init__(default=default, **kwargs)
         self.builtins = builtins or []
         self.configkey = configkey
 

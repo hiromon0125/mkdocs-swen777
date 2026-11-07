@@ -1242,16 +1242,16 @@
     "code": "PERF203",
     "end_location": {
       "column": 18,
-      "row": 1035
+      "row": 1039
     },
     "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
     "fix": null,
     "location": {
       "column": 13,
-      "row": 1025
+      "row": 1029
     },
     "message": "`try`-`except` within a loop incurs performance overhead",
-    "noqa_row": 1025,
+    "noqa_row": 1029,
     "url": "https://docs.astral.sh/ruff/rules/try-except-in-loop"
   },
   {
@@ -1259,16 +1259,16 @@
     "code": "B904",
     "end_location": {
       "column": 18,
-      "row": 1035
+      "row": 1039
     },
     "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
     "fix": null,
     "location": {
       "column": 17,
-      "row": 1033
+      "row": 1037
     },
     "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
-    "noqa_row": 1033,
+    "noqa_row": 1037,
     "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
   },
   {
@@ -1276,16 +1276,16 @@
     "code": "PTH120",
     "end_location": {
       "column": 43,
-      "row": 1209
+      "row": 1213
     },
     "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
     "fix": null,
     "location": {
       "column": 28,
-      "row": 1209
+      "row": 1213
     },
     "message": "`os.path.dirname()` should be replaced by `Path.parent`",
-    "noqa_row": 1209,
+    "noqa_row": 1213,
     "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
   },
   {
@@ -1293,16 +1293,16 @@
     "code": "B904",
     "end_location": {
       "column": 42,
-      "row": 1232
+      "row": 1236
     },
     "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
     "fix": null,
     "location": {
       "column": 13,
-      "row": 1232
+      "row": 1236
     },
     "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
-    "noqa_row": 1232,
+    "noqa_row": 1236,
     "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
   },
   {

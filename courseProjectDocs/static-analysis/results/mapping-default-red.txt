@@ -1,0 +1,15 @@
+F
+======================================================================
+FAIL: test_mapping_default_preserves_extension_options (mkdocs.tests.config.config_options_tests.MarkdownExtensionsTest.test_mapping_default_preserves_extension_options)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/tests/config/config_options_tests.py", line 1669, in test_mapping_default_preserves_extension_options
+    self.assertEqual(conf.mdx_configs, {'toc': {'title': 'Contents'}})
+AssertionError: {} != {'toc': {'title': 'Contents'}}
+- {}
++ {'toc': {'title': 'Contents'}}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)

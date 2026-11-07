@@ -6,4 +6,4 @@
 [1m[1;32m *** Building test project: minimal *** [0m
 [1m[1;32m *** Building test project: subpages *** [0m
 [1m[1;32m *** Building test project: complicated_config *** [0m
-[1m[1;32m *** Theme and integration builds are in /var/folders/nc/38m5j2bn1zx3_br7qr78xyrc0000gn/T/mkdocs_integration-qwi2jocq *** [0m
+[1m[1;32m *** Theme and integration builds are in /var/folders/nc/38m5j2bn1zx3_br7qr78xyrc0000gn/T/mkdocs_integration-ehv3laad *** [0m

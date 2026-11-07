@@ -79,8 +79,10 @@ and [exception chaining (B904)](https://docs.astral.sh/ruff/rules/raise-without-
 - **SA-01:** Changed `watch` to default to `None` and allocate an empty list
   inside `serve` when omitted.
 - **SA-02 and SA-03:** Replaced list defaults with immutable empty tuples and
-  copied supplied sequences into per-instance lists. Explicit `default=None`
-  retains its previous meaning. Both `ListOfPaths` overloads match the constructor.
+  copied supplied sequences into per-instance lists. `MarkdownExtensions` copies
+  dictionary defaults as dictionaries so extension options are preserved.
+  Explicit `default=None` retains its previous meaning. Both `ListOfPaths`
+  overloads match the constructor.
 - **SA-04:** Replaced the decorated method cache with an instance-owned module
   dictionary keyed by `(name, path)`. This removes the global reference to `self`
   while retaining module reuse across configuration reloads. The path remains
@@ -116,10 +118,12 @@ Evidence: [`before.json`](results/before.json), [`after.json`](results/after.jso
 | Check | Result | Evidence |
 |---|---|---|
 | Original unit suite, baseline | 725 tests, four skipped, no failures | [`tests-before.txt`](results/tests-before.txt) |
-| Unit suite after fixes | 728 tests, four skipped, no failures | [`tests-after.txt`](results/tests-after.txt) |
-| Unit suite with documentation dependencies | 728 tests, four skipped, no failures | [`tests-after-docs.txt`](results/tests-after-docs.txt) |
+| Unit suite after initial fixes | 728 tests, four skipped, no failures | [`tests-after.txt`](results/tests-after.txt) |
+| Final unit suite with documentation dependencies | 729 tests, four skipped, no failures | [`tests-after-docs.txt`](results/tests-after-docs.txt) |
 | Hook-option retention regression before fix | Failed: released option was still alive | [`regressions-red.txt`](results/regressions-red.txt) |
 | Hook tests after fix | Five tests pass, including three added tests | [`hooks-green.txt`](results/hooks-green.txt) |
+| Mapping-default regression before review fix | Failed: extension options were discarded | [`mapping-default-red.txt`](results/mapping-default-red.txt) |
+| Markdown extension tests after review fix | 17 tests pass, including the added mapping-default regression | [`markdown-extensions-green.txt`](results/markdown-extensions-green.txt) |
 | Integration builds | Both built-in themes and all four fixture projects pass strict builds | [`integration-after.txt`](results/integration-after.txt) |
 | Type checking | Mypy 1.8.0 passes all 61 source files | [`types-after.txt`](results/types-after.txt) |
 | Formatting and import order | Black 23.12.1 and isort 5.13.2 checks pass for all seven changed Python files | [`style-after.txt`](results/style-after.txt) |
@@ -128,6 +132,13 @@ The three added tests in
 [`config_options_tests.py`](../../mkdocs/tests/config/config_options_tests.py)
 exercise hook-option garbage collection, module reuse across configuration
 reloads, and distinct modules for identical names in different project paths.
+
+Review of the initial PR commit (`f7be8f6`) also caught a regression in SA-03:
+converting dictionary defaults into lists discarded extension options. The
+follow-up fix preserves the dictionary and its values. A fourth added test
+checks this through the resolved configuration's `markdown_extensions` and
+`mdx_configs` values. This corrects the original SA-03 fix; the assignment still
+contains nine logical findings.
 
 An initial baseline using `pathspec 1.1.1` had two failing subtests in
 `test_draft_docs_with_comments_from_user_guide` before production changes.
