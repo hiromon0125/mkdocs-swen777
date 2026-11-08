@@ -22,6 +22,7 @@ from typing import (
     Mapping,
     MutableMapping,
     NamedTuple,
+    Sequence,
     TypeVar,
     Union,
     overload,
@@ -759,15 +760,17 @@ class ListOfPaths(ListOfItems[str]):
     """
 
     @overload
-    def __init__(self, default=[]):
+    def __init__(self, default: Sequence[str] | None = ()):
         ...
 
     @overload
-    def __init__(self, default=[], *, required: bool):
+    def __init__(self, default: Sequence[str] | None = (), *, required: bool):
         ...
 
-    def __init__(self, default=[], required=None) -> None:
-        super().__init__(FilesystemObject(exists=True), default)
+    def __init__(self, default: Sequence[str] | None = (), required=None) -> None:
+        super().__init__(
+            FilesystemObject(exists=True), list(default) if default is not None else None
+        )
         self.required = required
 
 
@@ -968,9 +971,13 @@ class MarkdownExtensions(OptionallyRequired[List[str]]):
         self,
         builtins: list[str] | None = None,
         configkey: str = 'mdx_configs',
-        default: list[str] = [],
+        default: Sequence[str] | dict[str, dict | None] | None = (),
         **kwargs,
     ) -> None:
+        if isinstance(default, dict):
+            default = default.copy()
+        elif default is not None:
+            default = list(default)
         super().__init__(default=default, **kwargs)
         self.builtins = builtins or []
         self.configkey = configkey
@@ -1172,6 +1179,7 @@ class Hooks(BaseConfigOption[List[types.ModuleType]]):
         super().__init__()
         self.default = []
         self.plugins_key = plugins_key
+        self._loaded_hooks: dict[tuple[str, str], types.ModuleType] = {}
 
     def pre_validation(self, config: Config, key_name: str):
         self._base_option = ListOfItems(File(exists=True))
@@ -1184,10 +1192,12 @@ class Hooks(BaseConfigOption[List[types.ModuleType]]):
 
         hooks = {}
         for name, path in zip(value, paths):
-            hooks[name] = self._load_hook(name, path)
+            key = (name, path)
+            if key not in self._loaded_hooks:
+                self._loaded_hooks[key] = self._load_hook(name, path)
+            hooks[name] = self._loaded_hooks[key]
         return hooks
 
-    @functools.lru_cache(maxsize=None)
     def _load_hook(self, name, path):
         import importlib.util
 

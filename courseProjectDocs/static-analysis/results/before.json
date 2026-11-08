@@ -1,0 +1,3362 @@
+[
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 26,
+      "row": 237
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/__main__.py",
+    "fix": null,
+    "location": {
+      "column": 11,
+      "row": 237
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 237,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "PTH100",
+    "end_location": {
+      "column": 42,
+      "row": 237
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/__main__.py",
+    "fix": null,
+    "location": {
+      "column": 27,
+      "row": 237
+    },
+    "message": "`os.path.abspath()` should be replaced by `Path.resolve()`",
+    "noqa_row": 237,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-abspath"
+  },
+  {
+    "cell": null,
+    "code": "SIM117",
+    "end_location": {
+      "column": 50,
+      "row": 349
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/__main__.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "    with get_projects_file(projects_file) as p, _open_config_file(config_file) as f:\n        deps = get_deps(config_file=f, projects_file=p)",
+          "end_location": {
+            "column": 60,
+            "row": 350
+          },
+          "location": {
+            "column": 1,
+            "row": 348
+          }
+        }
+      ],
+      "message": "Combine `with` statements"
+    },
+    "location": {
+      "column": 5,
+      "row": 348
+    },
+    "message": "Use a single `with` statement with multiple contexts instead of nested `with` statements",
+    "noqa_row": 348,
+    "url": "https://docs.astral.sh/ruff/rules/multiple-with-statements"
+  },
+  {
+    "cell": null,
+    "code": "RET504",
+    "end_location": {
+      "column": 18,
+      "row": 88
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/build.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "return",
+          "end_location": {
+            "column": 13,
+            "row": 86
+          },
+          "location": {
+            "column": 5,
+            "row": 86
+          }
+        },
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 89
+          },
+          "location": {
+            "column": 1,
+            "row": 88
+          }
+        }
+      ],
+      "message": "Remove unnecessary assignment"
+    },
+    "location": {
+      "column": 12,
+      "row": 88
+    },
+    "message": "Unnecessary assignment to `output` before `return` statement",
+    "noqa_row": 88,
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-assign"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 35,
+      "row": 106
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/build.py",
+    "fix": null,
+    "location": {
+      "column": 23,
+      "row": 106
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 106,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH123",
+    "end_location": {
+      "column": 22,
+      "row": 112
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/build.py",
+    "fix": null,
+    "location": {
+      "column": 18,
+      "row": 112
+    },
+    "message": "`open()` should be replaced by `Path.open()`",
+    "noqa_row": 112,
+    "url": "https://docs.astral.sh/ruff/rules/builtin-open"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 54,
+      "row": 360
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/build.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 360
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 360,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "PTH110",
+    "end_location": {
+      "column": 31,
+      "row": 369
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/build.py",
+    "fix": null,
+    "location": {
+      "column": 17,
+      "row": 369
+    },
+    "message": "`os.path.exists()` should be replaced by `Path.exists()`",
+    "noqa_row": 369,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-exists"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 43,
+      "row": 32
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/gh_deploy.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 32
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 32,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "RET504",
+    "end_location": {
+      "column": 15,
+      "row": 47
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/gh_deploy.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "return",
+          "end_location": {
+            "column": 10,
+            "row": 46
+          },
+          "location": {
+            "column": 5,
+            "row": 46
+          }
+        },
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 48
+          },
+          "location": {
+            "column": 1,
+            "row": 47
+          }
+        }
+      ],
+      "message": "Remove unnecessary assignment"
+    },
+    "location": {
+      "column": 12,
+      "row": 47
+    },
+    "message": "Unnecessary assignment to `sha` before `return` statement",
+    "noqa_row": 47,
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-assign"
+  },
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 43,
+      "row": 119
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/gh_deploy.py",
+    "fix": null,
+    "location": {
+      "column": 28,
+      "row": 119
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 119,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 43,
+      "row": 142
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/gh_deploy.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 142
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 142,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 30,
+      "row": 144
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/gh_deploy.py",
+    "fix": null,
+    "location": {
+      "column": 18,
+      "row": 144
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 144,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH113",
+    "end_location": {
+      "column": 22,
+      "row": 146
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/gh_deploy.py",
+    "fix": null,
+    "location": {
+      "column": 8,
+      "row": 146
+    },
+    "message": "`os.path.isfile()` should be replaced by `Path.is_file()`",
+    "noqa_row": 146,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-isfile"
+  },
+  {
+    "cell": null,
+    "code": "PTH123",
+    "end_location": {
+      "column": 18,
+      "row": 148
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/gh_deploy.py",
+    "fix": null,
+    "location": {
+      "column": 14,
+      "row": 148
+    },
+    "message": "`open()` should be replaced by `Path.open()`",
+    "noqa_row": 148,
+    "url": "https://docs.astral.sh/ruff/rules/builtin-open"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 28,
+      "row": 30
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/new.py",
+    "fix": null,
+    "location": {
+      "column": 16,
+      "row": 30
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 30,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 31,
+      "row": 31
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/new.py",
+    "fix": null,
+    "location": {
+      "column": 19,
+      "row": 31
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 31,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 30,
+      "row": 32
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/new.py",
+    "fix": null,
+    "location": {
+      "column": 18,
+      "row": 32
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 32,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH110",
+    "end_location": {
+      "column": 22,
+      "row": 34
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/new.py",
+    "fix": null,
+    "location": {
+      "column": 8,
+      "row": 34
+    },
+    "message": "`os.path.exists()` should be replaced by `Path.exists()`",
+    "noqa_row": 34,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-exists"
+  },
+  {
+    "cell": null,
+    "code": "PTH110",
+    "end_location": {
+      "column": 26,
+      "row": 38
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/new.py",
+    "fix": null,
+    "location": {
+      "column": 12,
+      "row": 38
+    },
+    "message": "`os.path.exists()` should be replaced by `Path.exists()`",
+    "noqa_row": 38,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-exists"
+  },
+  {
+    "cell": null,
+    "code": "PTH102",
+    "end_location": {
+      "column": 17,
+      "row": 40
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/new.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 40
+    },
+    "message": "`os.mkdir()` should be replaced by `Path.mkdir()`",
+    "noqa_row": 40,
+    "url": "https://docs.astral.sh/ruff/rules/os-mkdir"
+  },
+  {
+    "cell": null,
+    "code": "PTH123",
+    "end_location": {
+      "column": 14,
+      "row": 43
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/new.py",
+    "fix": null,
+    "location": {
+      "column": 10,
+      "row": 43
+    },
+    "message": "`open()` should be replaced by `Path.open()`",
+    "noqa_row": 43,
+    "url": "https://docs.astral.sh/ruff/rules/builtin-open"
+  },
+  {
+    "cell": null,
+    "code": "PTH110",
+    "end_location": {
+      "column": 22,
+      "row": 46
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/new.py",
+    "fix": null,
+    "location": {
+      "column": 8,
+      "row": 46
+    },
+    "message": "`os.path.exists()` should be replaced by `Path.exists()`",
+    "noqa_row": 46,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-exists"
+  },
+  {
+    "cell": null,
+    "code": "PTH110",
+    "end_location": {
+      "column": 26,
+      "row": 50
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/new.py",
+    "fix": null,
+    "location": {
+      "column": 12,
+      "row": 50
+    },
+    "message": "`os.path.exists()` should be replaced by `Path.exists()`",
+    "noqa_row": 50,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-exists"
+  },
+  {
+    "cell": null,
+    "code": "PTH102",
+    "end_location": {
+      "column": 17,
+      "row": 51
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/new.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 51
+    },
+    "message": "`os.mkdir()` should be replaced by `Path.mkdir()`",
+    "noqa_row": 51,
+    "url": "https://docs.astral.sh/ruff/rules/os-mkdir"
+  },
+  {
+    "cell": null,
+    "code": "PTH123",
+    "end_location": {
+      "column": 14,
+      "row": 52
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/new.py",
+    "fix": null,
+    "location": {
+      "column": 10,
+      "row": 52
+    },
+    "message": "`open()` should be replaced by `Path.open()`",
+    "noqa_row": 52,
+    "url": "https://docs.astral.sh/ruff/rules/builtin-open"
+  },
+  {
+    "cell": null,
+    "code": "B006",
+    "end_location": {
+      "column": 26,
+      "row": 25
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/serve.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "None",
+          "end_location": {
+            "column": 26,
+            "row": 25
+          },
+          "location": {
+            "column": 24,
+            "row": 25
+          }
+        },
+        {
+          "content": "    if watch is None:\n        watch = []\n",
+          "end_location": {
+            "column": 1,
+            "row": 38
+          },
+          "location": {
+            "column": 1,
+            "row": 38
+          }
+        }
+      ],
+      "message": "Replace with `None`; initialize within function"
+    },
+    "location": {
+      "column": 24,
+      "row": 25
+    },
+    "message": "Do not use mutable data structures for argument defaults",
+    "noqa_row": 25,
+    "url": "https://docs.astral.sh/ruff/rules/mutable-argument-default"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 30,
+      "row": 73
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/serve.py",
+    "fix": null,
+    "location": {
+      "column": 26,
+      "row": 73
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 73,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH113",
+    "end_location": {
+      "column": 22,
+      "row": 74
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/serve.py",
+    "fix": null,
+    "location": {
+      "column": 16,
+      "row": 74
+    },
+    "message": "`os.path.isfile()` should be replaced by `Path.is_file()`",
+    "noqa_row": 74,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-isfile"
+  },
+  {
+    "cell": null,
+    "code": "PTH123",
+    "end_location": {
+      "column": 26,
+      "row": 75
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/serve.py",
+    "fix": null,
+    "location": {
+      "column": 22,
+      "row": 75
+    },
+    "message": "`open()` should be replaced by `Path.open()`",
+    "noqa_row": 75,
+    "url": "https://docs.astral.sh/ruff/rules/builtin-open"
+  },
+  {
+    "cell": null,
+    "code": "PTH112",
+    "end_location": {
+      "column": 17,
+      "row": 109
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/commands/serve.py",
+    "fix": null,
+    "location": {
+      "column": 12,
+      "row": 109
+    },
+    "message": "`os.path.isdir()` should be replaced by `Path.is_dir()`",
+    "noqa_row": 109,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-isdir"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 83,
+      "row": 170
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/base.py",
+    "fix": null,
+    "location": {
+      "column": 17,
+      "row": 170
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 170,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "PERF203",
+    "end_location": {
+      "column": 22,
+      "row": 193
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/base.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 191
+    },
+    "message": "`try`-`except` within a loop incurs performance overhead",
+    "noqa_row": 191,
+    "url": "https://docs.astral.sh/ruff/rules/try-except-in-loop"
+  },
+  {
+    "cell": null,
+    "code": "PERF203",
+    "end_location": {
+      "column": 40,
+      "row": 210
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/base.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 209
+    },
+    "message": "`try`-`except` within a loop incurs performance overhead",
+    "noqa_row": 209,
+    "url": "https://docs.astral.sh/ruff/rules/try-except-in-loop"
+  },
+  {
+    "cell": null,
+    "code": "PERF203",
+    "end_location": {
+      "column": 40,
+      "row": 224
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/base.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 223
+    },
+    "message": "`try`-`except` within a loop incurs performance overhead",
+    "noqa_row": 223,
+    "url": "https://docs.astral.sh/ruff/rules/try-except-in-loop"
+  },
+  {
+    "cell": null,
+    "code": "B028",
+    "end_location": {
+      "column": 22,
+      "row": 258
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/base.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 258
+    },
+    "message": "No explicit `stacklevel` keyword argument found",
+    "noqa_row": 258,
+    "url": "https://docs.astral.sh/ruff/rules/no-explicit-stacklevel"
+  },
+  {
+    "cell": null,
+    "code": "B028",
+    "end_location": {
+      "column": 22,
+      "row": 267
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/base.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 267
+    },
+    "message": "No explicit `stacklevel` keyword argument found",
+    "noqa_row": 267,
+    "url": "https://docs.astral.sh/ruff/rules/no-explicit-stacklevel"
+  },
+  {
+    "cell": null,
+    "code": "PTH100",
+    "end_location": {
+      "column": 35,
+      "row": 316
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/base.py",
+    "fix": null,
+    "location": {
+      "column": 20,
+      "row": 316
+    },
+    "message": "`os.path.abspath()` should be replaced by `Path.resolve()`",
+    "noqa_row": 316,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-abspath"
+  },
+  {
+    "cell": null,
+    "code": "SIM115",
+    "end_location": {
+      "column": 42,
+      "row": 319
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/base.py",
+    "fix": null,
+    "location": {
+      "column": 38,
+      "row": 319
+    },
+    "message": "Use context handler for opening files",
+    "noqa_row": 319,
+    "url": "https://docs.astral.sh/ruff/rules/open-file-with-context-handler"
+  },
+  {
+    "cell": null,
+    "code": "PTH123",
+    "end_location": {
+      "column": 42,
+      "row": 319
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/base.py",
+    "fix": null,
+    "location": {
+      "column": 38,
+      "row": 319
+    },
+    "message": "`open()` should be replaced by `Path.open()`",
+    "noqa_row": 319,
+    "url": "https://docs.astral.sh/ruff/rules/builtin-open"
+  },
+  {
+    "cell": null,
+    "code": "SIM105",
+    "end_location": {
+      "column": 17,
+      "row": 331
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/base.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "from contextlib import contextmanager, suppress",
+          "end_location": {
+            "column": 38,
+            "row": 9
+          },
+          "location": {
+            "column": 1,
+            "row": 9
+          }
+        },
+        {
+          "content": "with suppress(OSError)",
+          "end_location": {
+            "column": 12,
+            "row": 328
+          },
+          "location": {
+            "column": 9,
+            "row": 328
+          }
+        },
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 332
+          },
+          "location": {
+            "column": 1,
+            "row": 330
+          }
+        }
+      ],
+      "message": "Replace with `contextlib.suppress(OSError)`"
+    },
+    "location": {
+      "column": 9,
+      "row": 328
+    },
+    "message": "Use `contextlib.suppress(OSError)` instead of `try`-`except`-`pass`",
+    "noqa_row": 328,
+    "url": "https://docs.astral.sh/ruff/rules/suppressible-exception"
+  },
+  {
+    "cell": null,
+    "code": "SIM102",
+    "end_location": {
+      "column": 57,
+      "row": 365
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/base.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 364
+    },
+    "message": "Use a single `if` statement instead of nested `if` statements",
+    "noqa_row": 364,
+    "url": "https://docs.astral.sh/ruff/rules/collapsible-if"
+  },
+  {
+    "cell": null,
+    "code": "RET506",
+    "end_location": {
+      "column": 9,
+      "row": 387
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/base.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 387
+    },
+    "message": "Unnecessary `elif` after `raise` statement",
+    "noqa_row": 387,
+    "url": "https://docs.astral.sh/ruff/rules/superfluous-else-raise"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 42,
+      "row": 112
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 112
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 112,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "SIM105",
+    "end_location": {
+      "column": 17,
+      "row": 225
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "import contextlib\n",
+          "end_location": {
+            "column": 1,
+            "row": 45
+          },
+          "location": {
+            "column": 1,
+            "row": 45
+          }
+        },
+        {
+          "content": "with contextlib.suppress(AttributeError)",
+          "end_location": {
+            "column": 12,
+            "row": 222
+          },
+          "location": {
+            "column": 9,
+            "row": 222
+          }
+        },
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 226
+          },
+          "location": {
+            "column": 1,
+            "row": 224
+          }
+        }
+      ],
+      "message": "Replace with `contextlib.suppress(AttributeError)`"
+    },
+    "location": {
+      "column": 9,
+      "row": 222
+    },
+    "message": "Use `contextlib.suppress(AttributeError)` instead of `try`-`except`-`pass`",
+    "noqa_row": 222,
+    "url": "https://docs.astral.sh/ruff/rules/suppressible-exception"
+  },
+  {
+    "cell": null,
+    "code": "SIM105",
+    "end_location": {
+      "column": 17,
+      "row": 280
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "import contextlib\n",
+          "end_location": {
+            "column": 1,
+            "row": 45
+          },
+          "location": {
+            "column": 1,
+            "row": 45
+          }
+        },
+        {
+          "content": "with contextlib.suppress(AttributeError)",
+          "end_location": {
+            "column": 12,
+            "row": 277
+          },
+          "location": {
+            "column": 9,
+            "row": 277
+          }
+        },
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 281
+          },
+          "location": {
+            "column": 1,
+            "row": 279
+          }
+        }
+      ],
+      "message": "Replace with `contextlib.suppress(AttributeError)`"
+    },
+    "location": {
+      "column": 9,
+      "row": 277
+    },
+    "message": "Use `contextlib.suppress(AttributeError)` instead of `try`-`except`-`pass`",
+    "noqa_row": 277,
+    "url": "https://docs.astral.sh/ruff/rules/suppressible-exception"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 41,
+      "row": 482
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 17,
+      "row": 482
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 482,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 71,
+      "row": 487
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 487
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 487,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 62,
+      "row": 519
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 519
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 519,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "B028",
+    "end_location": {
+      "column": 22,
+      "row": 571
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 571
+    },
+    "message": "No explicit `stacklevel` keyword argument found",
+    "noqa_row": 571,
+    "url": "https://docs.astral.sh/ruff/rules/no-explicit-stacklevel"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 70,
+      "row": 644
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 17,
+      "row": 644
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 644,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 37,
+      "row": 657
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 657
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 657,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 28,
+      "row": 702
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 702
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 702,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "PTH117",
+    "end_location": {
+      "column": 49,
+      "row": 707
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 36,
+      "row": 707
+    },
+    "message": "`os.path.isabs()` should be replaced by `Path.is_absolute()`",
+    "noqa_row": 707,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-isabs"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 33,
+      "row": 708
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 21,
+      "row": 708
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 708,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH100",
+    "end_location": {
+      "column": 31,
+      "row": 711
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 16,
+      "row": 711
+    },
+    "message": "`os.path.abspath()` should be replaced by `Path.resolve()`",
+    "noqa_row": 711,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-abspath"
+  },
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 27,
+      "row": 731
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 12,
+      "row": 731
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 731,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "B006",
+    "end_location": {
+      "column": 34,
+      "row": 762
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "None",
+          "end_location": {
+            "column": 34,
+            "row": 762
+          },
+          "location": {
+            "column": 32,
+            "row": 762
+          }
+        },
+        {
+          "content": "        if default is None:\n            default = []\n",
+          "end_location": {
+            "column": 1,
+            "row": 763
+          },
+          "location": {
+            "column": 1,
+            "row": 763
+          }
+        }
+      ],
+      "message": "Replace with `None`; initialize within function"
+    },
+    "location": {
+      "column": 32,
+      "row": 762
+    },
+    "message": "Do not use mutable data structures for argument defaults",
+    "noqa_row": 762,
+    "url": "https://docs.astral.sh/ruff/rules/mutable-argument-default"
+  },
+  {
+    "cell": null,
+    "code": "B006",
+    "end_location": {
+      "column": 34,
+      "row": 766
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "None",
+          "end_location": {
+            "column": 34,
+            "row": 766
+          },
+          "location": {
+            "column": 32,
+            "row": 766
+          }
+        },
+        {
+          "content": "        if default is None:\n            default = []\n",
+          "end_location": {
+            "column": 1,
+            "row": 767
+          },
+          "location": {
+            "column": 1,
+            "row": 767
+          }
+        }
+      ],
+      "message": "Replace with `None`; initialize within function"
+    },
+    "location": {
+      "column": 32,
+      "row": 766
+    },
+    "message": "Do not use mutable data structures for argument defaults",
+    "noqa_row": 766,
+    "url": "https://docs.astral.sh/ruff/rules/mutable-argument-default"
+  },
+  {
+    "cell": null,
+    "code": "B006",
+    "end_location": {
+      "column": 34,
+      "row": 769
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "None",
+          "end_location": {
+            "column": 34,
+            "row": 769
+          },
+          "location": {
+            "column": 32,
+            "row": 769
+          }
+        },
+        {
+          "content": "        if default is None:\n            default = []\n",
+          "end_location": {
+            "column": 1,
+            "row": 770
+          },
+          "location": {
+            "column": 1,
+            "row": 770
+          }
+        }
+      ],
+      "message": "Replace with `None`; initialize within function"
+    },
+    "location": {
+      "column": 32,
+      "row": 769
+    },
+    "message": "Do not use mutable data structures for argument defaults",
+    "noqa_row": 769,
+    "url": "https://docs.astral.sh/ruff/rules/mutable-argument-default"
+  },
+  {
+    "cell": null,
+    "code": "RET506",
+    "end_location": {
+      "column": 13,
+      "row": 796
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 796
+    },
+    "message": "Unnecessary `elif` after `raise` statement",
+    "noqa_row": 796,
+    "url": "https://docs.astral.sh/ruff/rules/superfluous-else-raise"
+  },
+  {
+    "cell": null,
+    "code": "PTH117",
+    "end_location": {
+      "column": 62,
+      "row": 844
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 49,
+      "row": 844
+    },
+    "message": "`os.path.isabs()` should be replaced by `Path.is_absolute()`",
+    "noqa_row": 844,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-isabs"
+  },
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 41,
+      "row": 845
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 26,
+      "row": 845
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 845,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 54,
+      "row": 846
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 42,
+      "row": 846
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 846,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH112",
+    "end_location": {
+      "column": 62,
+      "row": 848
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 49,
+      "row": 848
+    },
+    "message": "`os.path.isdir()` should be replaced by `Path.is_dir()`",
+    "noqa_row": 848,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-isdir"
+  },
+  {
+    "cell": null,
+    "code": "RET505",
+    "end_location": {
+      "column": 13,
+      "row": 904
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 904
+    },
+    "message": "Unnecessary `elif` after `return` statement",
+    "noqa_row": 904,
+    "url": "https://docs.astral.sh/ruff/rules/superfluous-else-return"
+  },
+  {
+    "cell": null,
+    "code": "B006",
+    "end_location": {
+      "column": 32,
+      "row": 971
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "None",
+          "end_location": {
+            "column": 32,
+            "row": 971
+          },
+          "location": {
+            "column": 30,
+            "row": 971
+          }
+        },
+        {
+          "content": "        if default is None:\n            default = []\n",
+          "end_location": {
+            "column": 1,
+            "row": 974
+          },
+          "location": {
+            "column": 1,
+            "row": 974
+          }
+        }
+      ],
+      "message": "Replace with `None`; initialize within function"
+    },
+    "location": {
+      "column": 30,
+      "row": 971
+    },
+    "message": "Do not use mutable data structures for argument defaults",
+    "noqa_row": 971,
+    "url": "https://docs.astral.sh/ruff/rules/mutable-argument-default"
+  },
+  {
+    "cell": null,
+    "code": "PERF203",
+    "end_location": {
+      "column": 18,
+      "row": 1032
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 1022
+    },
+    "message": "`try`-`except` within a loop incurs performance overhead",
+    "noqa_row": 1022,
+    "url": "https://docs.astral.sh/ruff/rules/try-except-in-loop"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 18,
+      "row": 1032
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 17,
+      "row": 1030
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 1030,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "B019",
+    "end_location": {
+      "column": 39,
+      "row": 1190
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 1190
+    },
+    "message": "Use of `functools.lru_cache` or `functools.cache` on methods can lead to memory leaks",
+    "noqa_row": 1190,
+    "url": "https://docs.astral.sh/ruff/rules/cached-instance-method"
+  },
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 43,
+      "row": 1203
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 28,
+      "row": 1203
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 1203,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 42,
+      "row": 1226
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/config_options.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 1226
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 1226,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 94,
+      "row": 25
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/config/defaults.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 25
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 25,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 28,
+      "row": 20
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/contrib/search/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 20
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 20,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "PTH100",
+    "end_location": {
+      "column": 44,
+      "row": 20
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/contrib/search/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 29,
+      "row": 20
+    },
+    "message": "`os.path.abspath()` should be replaced by `Path.resolve()`",
+    "noqa_row": 20,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-abspath"
+  },
+  {
+    "cell": null,
+    "code": "RET503",
+    "end_location": {
+      "column": 33,
+      "row": 32
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/contrib/search/__init__.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "\n        return None",
+          "end_location": {
+            "column": 33,
+            "row": 32
+          },
+          "location": {
+            "column": 33,
+            "row": 32
+          }
+        }
+      ],
+      "message": "Add explicit `return` statement"
+    },
+    "location": {
+      "column": 9,
+      "row": 28
+    },
+    "message": "Missing explicit `return` at the end of function able to return non-`None` value",
+    "noqa_row": 28,
+    "url": "https://docs.astral.sh/ruff/rules/implicit-return"
+  },
+  {
+    "cell": null,
+    "code": "PTH113",
+    "end_location": {
+      "column": 30,
+      "row": 31
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/contrib/search/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 16,
+      "row": 31
+    },
+    "message": "`os.path.isfile()` should be replaced by `Path.is_file()`",
+    "noqa_row": 31,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-isfile"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 43,
+      "row": 31
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/contrib/search/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 31,
+      "row": 31
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 31,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 32,
+      "row": 70
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/contrib/search/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 20,
+      "row": 70
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 70,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 40,
+      "row": 97
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/contrib/search/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 28,
+      "row": 97
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 97,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 40,
+      "row": 99
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/contrib/search/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 28,
+      "row": 99
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 99,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PERF401",
+    "end_location": {
+      "column": 52,
+      "row": 115
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/contrib/search/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 21,
+      "row": 115
+    },
+    "message": "Use a list comprehension to create a transformed list",
+    "noqa_row": 115,
+    "url": "https://docs.astral.sh/ruff/rules/manual-list-comprehension"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 41,
+      "row": 118
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/contrib/search/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 29,
+      "row": 118
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 118,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 39,
+      "row": 119
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/contrib/search/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 27,
+      "row": 119
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 119,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 43,
+      "row": 102
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/contrib/search/search_index.py",
+    "fix": null,
+    "location": {
+      "column": 31,
+      "row": 102
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 102,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 36,
+      "row": 103
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/contrib/search/search_index.py",
+    "fix": null,
+    "location": {
+      "column": 21,
+      "row": 103
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 103,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "PTH100",
+    "end_location": {
+      "column": 52,
+      "row": 103
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/contrib/search/search_index.py",
+    "fix": null,
+    "location": {
+      "column": 37,
+      "row": 103
+    },
+    "message": "`os.path.abspath()` should be replaced by `Path.resolve()`",
+    "noqa_row": 103,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-abspath"
+  },
+  {
+    "cell": null,
+    "code": "PTH100",
+    "end_location": {
+      "column": 36,
+      "row": 114
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/livereload/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 21,
+      "row": 114
+    },
+    "message": "`os.path.abspath()` should be replaced by `Path.resolve()`",
+    "noqa_row": 114,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-abspath"
+  },
+  {
+    "cell": null,
+    "code": "PTH100",
+    "end_location": {
+      "column": 31,
+      "row": 141
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/livereload/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 16,
+      "row": 141
+    },
+    "message": "`os.path.abspath()` should be replaced by `Path.resolve()`",
+    "noqa_row": 141,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-abspath"
+  },
+  {
+    "cell": null,
+    "code": "PTH100",
+    "end_location": {
+      "column": 31,
+      "row": 165
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/livereload/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 16,
+      "row": 165
+    },
+    "message": "`os.path.abspath()` should be replaced by `Path.resolve()`",
+    "noqa_row": 165,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-abspath"
+  },
+  {
+    "cell": null,
+    "code": "SIM102",
+    "end_location": {
+      "column": 72,
+      "row": 270
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/livereload/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 269
+    },
+    "message": "Use a single `if` statement instead of nested `if` statements",
+    "noqa_row": 269,
+    "url": "https://docs.astral.sh/ruff/rules/collapsible-if"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 37,
+      "row": 292
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/livereload/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 25,
+      "row": 292
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 292,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "SIM115",
+    "end_location": {
+      "column": 34,
+      "row": 305
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/livereload/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 30,
+      "row": 305
+    },
+    "message": "Use context handler for opening files",
+    "noqa_row": 305,
+    "url": "https://docs.astral.sh/ruff/rules/open-file-with-context-handler"
+  },
+  {
+    "cell": null,
+    "code": "PTH123",
+    "end_location": {
+      "column": 34,
+      "row": 305
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/livereload/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 30,
+      "row": 305
+    },
+    "message": "`open()` should be replaced by `Path.open()`",
+    "noqa_row": 305,
+    "url": "https://docs.astral.sh/ruff/rules/builtin-open"
+  },
+  {
+    "cell": null,
+    "code": "PTH113",
+    "end_location": {
+      "column": 57,
+      "row": 307
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/livereload/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 43,
+      "row": 307
+    },
+    "message": "`os.path.isfile()` should be replaced by `Path.is_file()`",
+    "noqa_row": 307,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-isfile"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 70,
+      "row": 307
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/livereload/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 58,
+      "row": 307
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 307,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH202",
+    "end_location": {
+      "column": 45,
+      "row": 319
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/livereload/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 30,
+      "row": 319
+    },
+    "message": "`os.path.getsize` should be replaced by `Path.stat().st_size`",
+    "noqa_row": 319,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-getsize"
+  },
+  {
+    "cell": null,
+    "code": "SIM105",
+    "end_location": {
+      "column": 13,
+      "row": 380
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/livereload/__init__.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "import contextlib\n",
+          "end_location": {
+            "column": 1,
+            "row": 28
+          },
+          "location": {
+            "column": 1,
+            "row": 28
+          }
+        },
+        {
+          "content": "with contextlib.suppress(ValueError)",
+          "end_location": {
+            "column": 8,
+            "row": 377
+          },
+          "location": {
+            "column": 5,
+            "row": 377
+          }
+        },
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 381
+          },
+          "location": {
+            "column": 1,
+            "row": 379
+          }
+        }
+      ],
+      "message": "Replace with `contextlib.suppress(ValueError)`"
+    },
+    "location": {
+      "column": 5,
+      "row": 377
+    },
+    "message": "Use `contextlib.suppress(ValueError)` instead of `try`-`except`-`pass`",
+    "noqa_row": 377,
+    "url": "https://docs.astral.sh/ruff/rules/suppressible-exception"
+  },
+  {
+    "cell": null,
+    "code": "PTH109",
+    "end_location": {
+      "column": 36,
+      "row": 378
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/livereload/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 27,
+      "row": 378
+    },
+    "message": "`os.getcwd()` should be replaced by `Path.cwd()`",
+    "noqa_row": 378,
+    "url": "https://docs.astral.sh/ruff/rules/os-getcwd"
+  },
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 28,
+      "row": 26
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/localization.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 26
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 26,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "PTH100",
+    "end_location": {
+      "column": 44,
+      "row": 26
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/localization.py",
+    "fix": null,
+    "location": {
+      "column": 29,
+      "row": 26
+    },
+    "message": "`os.path.abspath()` should be replaced by `Path.resolve()`",
+    "noqa_row": 26,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-abspath"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 64,
+      "row": 42
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/localization.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 42
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 42,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 31,
+      "row": 77
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/localization.py",
+    "fix": null,
+    "location": {
+      "column": 19,
+      "row": 77
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 77,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "SIM105",
+    "end_location": {
+      "column": 25,
+      "row": 530
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/plugins.py",
+    "fix": null,
+    "location": {
+      "column": 17,
+      "row": 527
+    },
+    "message": "Use `contextlib.suppress(TypeError)` instead of `try`-`except`-`pass`",
+    "noqa_row": 527,
+    "url": "https://docs.astral.sh/ruff/rules/suppressible-exception"
+  },
+  {
+    "cell": null,
+    "code": "SIM108",
+    "end_location": {
+      "column": 42,
+      "row": 568
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/plugins.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "result = method(item, **kwargs) if pass_item else method(**kwargs)",
+          "end_location": {
+            "column": 42,
+            "row": 568
+          },
+          "location": {
+            "column": 13,
+            "row": 565
+          }
+        }
+      ],
+      "message": "Replace `if`-`else`-block with `result = method(item, **kwargs) if pass_item else method(**kwargs)`"
+    },
+    "location": {
+      "column": 13,
+      "row": 565
+    },
+    "message": "Use ternary operator `result = method(item, **kwargs) if pass_item else method(**kwargs)` instead of `if`-`else`-block",
+    "noqa_row": 565,
+    "url": "https://docs.astral.sh/ruff/rules/if-else-block-instead-of-if-exp"
+  },
+  {
+    "cell": null,
+    "code": "B028",
+    "end_location": {
+      "column": 26,
+      "row": 100
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 100
+    },
+    "message": "No explicit `stacklevel` keyword argument found",
+    "noqa_row": 100,
+    "url": "https://docs.astral.sh/ruff/rules/no-explicit-stacklevel"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 68,
+      "row": 111
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 111
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 111,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "PTH113",
+    "end_location": {
+      "column": 38,
+      "row": 166
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 24,
+      "row": 166
+    },
+    "message": "`os.path.isfile()` should be replaced by `Path.is_file()`",
+    "noqa_row": 166,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-isfile"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 51,
+      "row": 166
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 39,
+      "row": 166
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 166,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "B028",
+    "end_location": {
+      "column": 22,
+      "row": 172
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 172
+    },
+    "message": "No explicit `stacklevel` keyword argument found",
+    "noqa_row": 172,
+    "url": "https://docs.astral.sh/ruff/rules/no-explicit-stacklevel"
+  },
+  {
+    "cell": null,
+    "code": "B028",
+    "end_location": {
+      "column": 22,
+      "row": 177
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 177
+    },
+    "message": "No explicit `stacklevel` keyword argument found",
+    "noqa_row": 177,
+    "url": "https://docs.astral.sh/ruff/rules/no-explicit-stacklevel"
+  },
+  {
+    "cell": null,
+    "code": "RET505",
+    "end_location": {
+      "column": 17,
+      "row": 384
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 384
+    },
+    "message": "Unnecessary `else` after `return` statement",
+    "noqa_row": 384,
+    "url": "https://docs.astral.sh/ruff/rules/superfluous-else-return"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 45,
+      "row": 414
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 33,
+      "row": 414
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 414,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 45,
+      "row": 419
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 33,
+      "row": 419
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 419,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH123",
+    "end_location": {
+      "column": 22,
+      "row": 437
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 18,
+      "row": 437
+    },
+    "message": "`open()` should be replaced by `Path.open()`",
+    "noqa_row": 437,
+    "url": "https://docs.astral.sh/ruff/rules/builtin-open"
+  },
+  {
+    "cell": null,
+    "code": "PTH123",
+    "end_location": {
+      "column": 22,
+      "row": 461
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 18,
+      "row": 461
+    },
+    "message": "`open()` should be replaced by `Path.open()`",
+    "noqa_row": 461,
+    "url": "https://docs.astral.sh/ruff/rules/builtin-open"
+  },
+  {
+    "cell": null,
+    "code": "PTH103",
+    "end_location": {
+      "column": 20,
+      "row": 480
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 480
+    },
+    "message": "`os.makedirs()` should be replaced by `Path.mkdir(parents=True)`",
+    "noqa_row": 480,
+    "url": "https://docs.astral.sh/ruff/rules/os-makedirs"
+  },
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 36,
+      "row": 480
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 21,
+      "row": 480
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 480,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "SIM105",
+    "end_location": {
+      "column": 21,
+      "row": 487
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 484
+    },
+    "message": "Use `contextlib.suppress(shutil.SameFileError)` instead of `try`-`except`-`pass`",
+    "noqa_row": 484,
+    "url": "https://docs.astral.sh/ruff/rules/suppressible-exception"
+  },
+  {
+    "cell": null,
+    "code": "PTH123",
+    "end_location": {
+      "column": 22,
+      "row": 489
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 18,
+      "row": 489
+    },
+    "message": "`open()` should be replaced by `Path.open()`",
+    "noqa_row": 489,
+    "url": "https://docs.astral.sh/ruff/rules/builtin-open"
+  },
+  {
+    "cell": null,
+    "code": "PTH123",
+    "end_location": {
+      "column": 22,
+      "row": 492
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 18,
+      "row": 492
+    },
+    "message": "`open()` should be replaced by `Path.open()`",
+    "noqa_row": 492,
+    "url": "https://docs.astral.sh/ruff/rules/builtin-open"
+  },
+  {
+    "cell": null,
+    "code": "PTH113",
+    "end_location": {
+      "column": 26,
+      "row": 499
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 12,
+      "row": 499
+    },
+    "message": "`os.path.isfile()` should be replaced by `Path.is_file()`",
+    "noqa_row": 499,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-isfile"
+  },
+  {
+    "cell": null,
+    "code": "PTH204",
+    "end_location": {
+      "column": 36,
+      "row": 500
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 20,
+      "row": 500
+    },
+    "message": "`os.path.getmtime` should be replaced by `Path.stat().st_mtime`",
+    "noqa_row": 500,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-getmtime"
+  },
+  {
+    "cell": null,
+    "code": "PTH204",
+    "end_location": {
+      "column": 75,
+      "row": 500
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 59,
+      "row": 500
+    },
+    "message": "`os.path.getmtime` should be replaced by `Path.stat().st_mtime`",
+    "noqa_row": 500,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-getmtime"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 29,
+      "row": 558
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 17,
+      "row": 558
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 558,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "SIM105",
+    "end_location": {
+      "column": 21,
+      "row": 581
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 578
+    },
+    "message": "Use `contextlib.suppress(ValueError)` instead of `try`-`except`-`pass`",
+    "noqa_row": 578,
+    "url": "https://docs.astral.sh/ruff/rules/suppressible-exception"
+  },
+  {
+    "cell": null,
+    "code": "SIM105",
+    "end_location": {
+      "column": 21,
+      "row": 586
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "import contextlib\n",
+          "end_location": {
+            "column": 1,
+            "row": 20
+          },
+          "location": {
+            "column": 1,
+            "row": 20
+          }
+        },
+        {
+          "content": "with contextlib.suppress(ValueError)",
+          "end_location": {
+            "column": 16,
+            "row": 583
+          },
+          "location": {
+            "column": 13,
+            "row": 583
+          }
+        },
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 587
+          },
+          "location": {
+            "column": 1,
+            "row": 585
+          }
+        }
+      ],
+      "message": "Replace with `contextlib.suppress(ValueError)`"
+    },
+    "location": {
+      "column": 13,
+      "row": 583
+    },
+    "message": "Use `contextlib.suppress(ValueError)` instead of `try`-`except`-`pass`",
+    "noqa_row": 583,
+    "url": "https://docs.astral.sh/ruff/rules/suppressible-exception"
+  },
+  {
+    "cell": null,
+    "code": "PTH122",
+    "end_location": {
+      "column": 29,
+      "row": 605
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 605
+    },
+    "message": "`os.path.splitext()` should be replaced by `Path.suffix`, `Path.stem`, and `Path.parent`",
+    "noqa_row": 605,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-splitext"
+  },
+  {
+    "cell": null,
+    "code": "B028",
+    "end_location": {
+      "column": 18,
+      "row": 614
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/files.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 614
+    },
+    "message": "No explicit `stacklevel` keyword argument found",
+    "noqa_row": 614,
+    "url": "https://docs.astral.sh/ruff/rules/no-explicit-stacklevel"
+  },
+  {
+    "cell": null,
+    "code": "PERF401",
+    "end_location": {
+      "column": 54,
+      "row": 93
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/nav.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 93
+    },
+    "message": "Use a list comprehension to create a transformed list",
+    "noqa_row": 93,
+    "url": "https://docs.astral.sh/ruff/rules/manual-list-comprehension"
+  },
+  {
+    "cell": null,
+    "code": "RET505",
+    "end_location": {
+      "column": 9,
+      "row": 196
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/nav.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 196
+    },
+    "message": "Unnecessary `elif` after `return` statement",
+    "noqa_row": 196,
+    "url": "https://docs.astral.sh/ruff/rules/superfluous-else-return"
+  },
+  {
+    "cell": null,
+    "code": "B028",
+    "end_location": {
+      "column": 22,
+      "row": 223
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/pages.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 223
+    },
+    "message": "No explicit `stacklevel` keyword argument found",
+    "noqa_row": 223,
+    "url": "https://docs.astral.sh/ruff/rules/no-explicit-stacklevel"
+  },
+  {
+    "cell": null,
+    "code": "RET505",
+    "end_location": {
+      "column": 13,
+      "row": 249
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/pages.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 249
+    },
+    "message": "Unnecessary `elif` after `return` statement",
+    "noqa_row": 249,
+    "url": "https://docs.astral.sh/ruff/rules/superfluous-else-return"
+  },
+  {
+    "cell": null,
+    "code": "SIM102",
+    "end_location": {
+      "column": 50,
+      "row": 339
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/pages.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "            if element.tag == 'a' and (anchor := element.get('name')):\n                add(anchor)",
+          "end_location": {
+            "column": 32,
+            "row": 340
+          },
+          "location": {
+            "column": 1,
+            "row": 338
+          }
+        }
+      ],
+      "message": "Combine `if` statements using `and`"
+    },
+    "location": {
+      "column": 13,
+      "row": 338
+    },
+    "message": "Use a single `if` statement instead of nested `if` statements",
+    "noqa_row": 338,
+    "url": "https://docs.astral.sh/ruff/rules/collapsible-if"
+  },
+  {
+    "cell": null,
+    "code": "RET505",
+    "end_location": {
+      "column": 13,
+      "row": 428
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/structure/pages.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 428
+    },
+    "message": "Unnecessary `elif` after `return` statement",
+    "noqa_row": 428,
+    "url": "https://docs.astral.sh/ruff/rules/superfluous-else-return"
+  },
+  {
+    "cell": null,
+    "code": "PTH100",
+    "end_location": {
+      "column": 38,
+      "row": 50
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/theme.py",
+    "fix": null,
+    "location": {
+      "column": 23,
+      "row": 50
+    },
+    "message": "`os.path.abspath()` should be replaced by `Path.resolve()`",
+    "noqa_row": 50,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-abspath"
+  },
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 54,
+      "row": 50
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/theme.py",
+    "fix": null,
+    "location": {
+      "column": 39,
+      "row": 50
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 50,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 40,
+      "row": 51
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/theme.py",
+    "fix": null,
+    "location": {
+      "column": 28,
+      "row": 51
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 51,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "B028",
+    "end_location": {
+      "column": 22,
+      "row": 87
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/theme.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 87
+    },
+    "message": "No explicit `stacklevel` keyword argument found",
+    "noqa_row": 87,
+    "url": "https://docs.astral.sh/ruff/rules/no-explicit-stacklevel"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 37,
+      "row": 131
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/theme.py",
+    "fix": null,
+    "location": {
+      "column": 25,
+      "row": 131
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 131,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH123",
+    "end_location": {
+      "column": 22,
+      "row": 132
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/theme.py",
+    "fix": null,
+    "location": {
+      "column": 18,
+      "row": 132
+    },
+    "message": "`open()` should be replaced by `Path.open()`",
+    "noqa_row": 132,
+    "url": "https://docs.astral.sh/ruff/rules/builtin-open"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 14,
+      "row": 139
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/theme.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 136
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 136,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 33,
+      "row": 119
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 18,
+      "row": 119
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 119,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "PTH103",
+    "end_location": {
+      "column": 16,
+      "row": 120
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 120
+    },
+    "message": "`os.makedirs()` should be replaced by `Path.mkdir(parents=True)`",
+    "noqa_row": 120,
+    "url": "https://docs.astral.sh/ruff/rules/os-makedirs"
+  },
+  {
+    "cell": null,
+    "code": "PTH112",
+    "end_location": {
+      "column": 21,
+      "row": 121
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 8,
+      "row": 121
+    },
+    "message": "`os.path.isdir()` should be replaced by `Path.is_dir()`",
+    "noqa_row": 121,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-isdir"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 35,
+      "row": 122
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 23,
+      "row": 122
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 122,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH119",
+    "end_location": {
+      "column": 65,
+      "row": 122
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 49,
+      "row": 122
+    },
+    "message": "`os.path.basename()` should be replaced by `Path.name`",
+    "noqa_row": 122,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-basename"
+  },
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 33,
+      "row": 128
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 18,
+      "row": 128
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 128,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "PTH103",
+    "end_location": {
+      "column": 16,
+      "row": 129
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 129
+    },
+    "message": "`os.makedirs()` should be replaced by `Path.mkdir(parents=True)`",
+    "noqa_row": 129,
+    "url": "https://docs.astral.sh/ruff/rules/os-makedirs"
+  },
+  {
+    "cell": null,
+    "code": "PTH123",
+    "end_location": {
+      "column": 14,
+      "row": 130
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 10,
+      "row": 130
+    },
+    "message": "`open()` should be replaced by `Path.open()`",
+    "noqa_row": 130,
+    "url": "https://docs.astral.sh/ruff/rules/builtin-open"
+  },
+  {
+    "cell": null,
+    "code": "PTH110",
+    "end_location": {
+      "column": 26,
+      "row": 136
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 12,
+      "row": 136
+    },
+    "message": "`os.path.exists()` should be replaced by `Path.exists()`",
+    "noqa_row": 136,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-exists"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 28,
+      "row": 145
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 16,
+      "row": 145
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 145,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH112",
+    "end_location": {
+      "column": 25,
+      "row": 146
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 12,
+      "row": 146
+    },
+    "message": "`os.path.isdir()` should be replaced by `Path.is_dir()`",
+    "noqa_row": 146,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-isdir"
+  },
+  {
+    "cell": null,
+    "code": "PTH108",
+    "end_location": {
+      "column": 22,
+      "row": 149
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 13,
+      "row": 149
+    },
+    "message": "`os.unlink()` should be replaced by `Path.unlink()`",
+    "noqa_row": 149,
+    "url": "https://docs.astral.sh/ruff/rules/os-unlink"
+  },
+  {
+    "cell": null,
+    "code": "B028",
+    "end_location": {
+      "column": 18,
+      "row": 250
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 5,
+      "row": 250
+    },
+    "message": "No explicit `stacklevel` keyword argument found",
+    "noqa_row": 250,
+    "url": "https://docs.astral.sh/ruff/rules/no-explicit-stacklevel"
+  },
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 27,
+      "row": 259
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 12,
+      "row": 259
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 259,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "PTH100",
+    "end_location": {
+      "column": 43,
+      "row": 259
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 28,
+      "row": 259
+    },
+    "message": "`os.path.abspath()` should be replaced by `Path.resolve()`",
+    "noqa_row": 259,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-abspath"
+  },
+  {
+    "cell": null,
+    "code": "RET506",
+    "end_location": {
+      "column": 13,
+      "row": 277
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 277
+    },
+    "message": "Unnecessary `elif` after `raise` statement",
+    "noqa_row": 277,
+    "url": "https://docs.astral.sh/ruff/rules/superfluous-else-raise"
+  },
+  {
+    "cell": null,
+    "code": "B028",
+    "end_location": {
+      "column": 22,
+      "row": 403
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/__init__.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 403
+    },
+    "message": "No explicit `stacklevel` keyword argument found",
+    "noqa_row": 403,
+    "url": "https://docs.astral.sh/ruff/rules/no-explicit-stacklevel"
+  },
+  {
+    "cell": null,
+    "code": "RET504",
+    "end_location": {
+      "column": 16,
+      "row": 41
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/rendering.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "return",
+          "end_location": {
+            "column": 11,
+            "row": 40
+          },
+          "location": {
+            "column": 5,
+            "row": 40
+          }
+        },
+        {
+          "content": "",
+          "end_location": {
+            "column": 1,
+            "row": 42
+          },
+          "location": {
+            "column": 1,
+            "row": 41
+          }
+        }
+      ],
+      "message": "Remove unnecessary assignment"
+    },
+    "location": {
+      "column": 12,
+      "row": 41
+    },
+    "message": "Unnecessary assignment to `text` before `return` statement",
+    "noqa_row": 41,
+    "url": "https://docs.astral.sh/ruff/rules/unnecessary-assign"
+  },
+  {
+    "cell": null,
+    "code": "RET505",
+    "end_location": {
+      "column": 13,
+      "row": 32
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/yaml.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 32
+    },
+    "message": "Unnecessary `elif` after `return` statement",
+    "noqa_row": 32,
+    "url": "https://docs.astral.sh/ruff/rules/superfluous-else-return"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 28,
+      "row": 52
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/yaml.py",
+    "fix": null,
+    "location": {
+      "column": 16,
+      "row": 52
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 52,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 31,
+      "row": 69
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/yaml.py",
+    "fix": null,
+    "location": {
+      "column": 16,
+      "row": 69
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 69,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 31,
+      "row": 106
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/yaml.py",
+    "fix": null,
+    "location": {
+      "column": 16,
+      "row": 106
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 106,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 44,
+      "row": 106
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/yaml.py",
+    "fix": null,
+    "location": {
+      "column": 32,
+      "row": 106
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 106,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "B904",
+    "end_location": {
+      "column": 10,
+      "row": 136
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/yaml.py",
+    "fix": null,
+    "location": {
+      "column": 9,
+      "row": 134
+    },
+    "message": "Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling",
+    "noqa_row": 134,
+    "url": "https://docs.astral.sh/ruff/rules/raise-without-from-inside-except"
+  },
+  {
+    "cell": null,
+    "code": "PTH118",
+    "end_location": {
+      "column": 48,
+      "row": 141
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/yaml.py",
+    "fix": null,
+    "location": {
+      "column": 36,
+      "row": 141
+    },
+    "message": "`os.path.join()` should be replaced by `Path` with `/` operator",
+    "noqa_row": 141,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-join"
+  },
+  {
+    "cell": null,
+    "code": "PTH120",
+    "end_location": {
+      "column": 64,
+      "row": 141
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/yaml.py",
+    "fix": null,
+    "location": {
+      "column": 49,
+      "row": 141
+    },
+    "message": "`os.path.dirname()` should be replaced by `Path.parent`",
+    "noqa_row": 141,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-dirname"
+  },
+  {
+    "cell": null,
+    "code": "PTH110",
+    "end_location": {
+      "column": 30,
+      "row": 142
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/yaml.py",
+    "fix": null,
+    "location": {
+      "column": 16,
+      "row": 142
+    },
+    "message": "`os.path.exists()` should be replaced by `Path.exists()`",
+    "noqa_row": 142,
+    "url": "https://docs.astral.sh/ruff/rules/os-path-exists"
+  },
+  {
+    "cell": null,
+    "code": "PTH123",
+    "end_location": {
+      "column": 18,
+      "row": 147
+    },
+    "filename": "/Users/umoren/Desktop/coding/rit/swen-777/project/mkdocs-swen777/mkdocs/utils/yaml.py",
+    "fix": null,
+    "location": {
+      "column": 14,
+      "row": 147
+    },
+    "message": "`open()` should be replaced by `Path.open()`",
+    "noqa_row": 147,
+    "url": "https://docs.astral.sh/ruff/rules/builtin-open"
+  }
+]
