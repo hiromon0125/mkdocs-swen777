@@ -17,6 +17,12 @@ def command_env(cwd):
         GIT_COMMITTER_NAME="System Test",
         GIT_COMMITTER_EMAIL="system-test@example.invalid",
         GIT_CEILING_DIRECTORIES=str(Path(cwd).resolve().parent),
+        # Personal hooks and signing settings must not affect disposable fixtures.
+        GIT_CONFIG_GLOBAL=os.devnull,
+        # Contain CLI temp files even when configuration validation aborts early.
+        TMPDIR=str(Path(cwd).resolve()),
+        TMP=str(Path(cwd).resolve()),
+        TEMP=str(Path(cwd).resolve()),
     )
     return env
 
