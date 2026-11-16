@@ -1,0 +1,19 @@
+test_st_b1_create_and_build (system_build_tests.BuildSystemTests.test_st_b1_create_and_build)
+ST-B1: Create a project, build it, and inspect the published files. ... ok
+test_st_b2_strict_broken_link (system_build_tests.BuildSystemTests.test_st_b2_strict_broken_link)
+ST-B2: A broken link warns normally and fails in strict mode. ... ok
+test_st_b3_missing_config (system_build_tests.BuildSystemTests.test_st_b3_missing_config)
+ST-B3: Building in an empty directory reports the missing config. ... ok
+test_st_d1_deploy_to_gh_pages (system_deploy_tests.DeploySystemTests.test_st_d1_deploy_to_gh_pages)
+ST-D1: Push generated pages and source commit metadata to a local remote. ... ok
+test_st_d2_deploy_outside_git_repo (system_deploy_tests.DeploySystemTests.test_st_d2_deploy_outside_git_repo)
+ST-D2: A failed deploy outside Git leaves the already built site behind. ... ok
+test_st_s1_serve_over_http (system_serve_tests.ServeSystemTests.test_st_s1_serve_over_http)
+ST-S1: Serve the homepage, a subpage, and a missing URL. ... ok
+test_st_s2_invalid_dev_address (system_serve_tests.ServeSystemTests.test_st_s2_invalid_dev_address)
+ST-S2: Reject a dev address that is not IP:PORT. ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.405s
+
+OK
