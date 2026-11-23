@@ -179,8 +179,7 @@ were not executed for this assignment.
 ## Group Contributions
 
 Each team member identified three code smells and fixed their findings, for a
-total of nine logical fixes. The work used AI assistance for analysis,
-implementation, validation, and report preparation.
+total of nine logical fixes.
 
 | Team member | Findings identified and fixed | Contribution |
 |---|---|---|
