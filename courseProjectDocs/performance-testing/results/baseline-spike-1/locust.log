@@ -1,0 +1,65 @@
+[2026-11-25 04:17:16,684] e3e58f121c2d/INFO/locust.main: Starting Locust 2.47.0
+[2026-11-25 04:17:16,702] e3e58f121c2d/INFO/locust.runners: e3e58f121c2d_eacb841c0b7b4dd2a2b4fdc3f07b7b78 (index 0) reported as ready. 1 workers connected.
+[2026-11-25 04:17:16,702] e3e58f121c2d/INFO/locust.runners: e3e58f121c2d_e1357a62f9af47bba01d63e819c7c84e (index 1) reported as ready. 2 workers connected.
+[2026-11-25 04:17:17,703] e3e58f121c2d/INFO/locust.runners: Shape test starting.
+[2026-11-25 04:17:17,705] e3e58f121c2d/INFO/locust.runners: Shape worker starting
+[2026-11-25 04:17:17,706] e3e58f121c2d/INFO/locust.runners: Shape test updating to 10 users at 2.00 spawn rate
+[2026-11-25 04:17:17,707] e3e58f121c2d/INFO/locust.runners: Sending spawn jobs of 10 users at 2.00 spawn rate to 2 ready workers
+[2026-11-25 04:17:21,875] e3e58f121c2d/INFO/locust.runners: All users spawned: {"DocumentationReader": 10} (10 total users)
+[2026-11-25 04:17:27,888] e3e58f121c2d/INFO/locust.runners: Shape test updating to 10 users at 10.00 spawn rate
+[2026-11-25 04:17:27,889] e3e58f121c2d/INFO/locust.runners: Sending spawn jobs of 10 users at 10.00 spawn rate to 2 ready workers
+[2026-11-25 04:17:27,890] e3e58f121c2d/INFO/locust.runners: All users spawned: {"DocumentationReader": 10} (10 total users)
+[2026-11-25 04:17:58,134] e3e58f121c2d/INFO/locust.runners: Shape test updating to 100 users at 400.00 spawn rate
+[2026-11-25 04:17:58,134] e3e58f121c2d/INFO/locust.runners: Sending spawn jobs of 100 users at 400.00 spawn rate to 2 ready workers
+[2026-11-25 04:17:58,134] e3e58f121c2d/WARNING/locust.runners: Your selected spawn rate is very high (>100/worker), and this is known to sometimes cause issues. Do you really need to ramp up that fast?
+[2026-11-25 04:17:58,314] e3e58f121c2d/INFO/locust.runners: All users spawned: {"DocumentationReader": 100} (100 total users)
+[2026-11-25 04:18:13,192] e3e58f121c2d/INFO/locust.runners: Shape test updating to 10 users at 400.00 spawn rate
+[2026-11-25 04:18:13,192] e3e58f121c2d/INFO/locust.runners: Sending spawn jobs of 10 users at 400.00 spawn rate to 2 ready workers
+[2026-11-25 04:18:13,192] e3e58f121c2d/WARNING/locust.runners: Your selected spawn rate is very high (>100/worker), and this is known to sometimes cause issues. Do you really need to ramp up that fast?
+[2026-11-25 04:18:14,197] e3e58f121c2d/INFO/locust.runners: Spawning is complete and report waittime is expired, but not all reports received from workers: {"DocumentationReader": 78} (78 total users)
+[2026-11-25 04:18:57,747] e3e58f121c2d/INFO/locust.runners: Shape test stopping
+[2026-11-25 04:18:57,748] e3e58f121c2d/INFO/locust.runners: Got quit message from master, shutting down...
+[2026-11-25 04:18:57,748] e3e58f121c2d/INFO/locust.runners: Got quit message from master, shutting down...
+[2026-11-25 04:18:58,251] e3e58f121c2d/INFO/locust.main: Shape test completed, shutting down
+[2026-11-25 04:18:58,262] e3e58f121c2d/INFO/locust.main: Shutting down (exit code 0)
+[2026-11-25 04:18:58,834] e3e58f121c2d/INFO/locust.main: Shutting down (exit code 0)
+[2026-11-25 04:18:59,345] e3e58f121c2d/INFO/locust.main: Shutting down (exit code 1)
+Type     Name                                                                          # reqs      # fails |    Avg     Min     Max    Med |   req/s  failures/s
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+GET      document                                                                        7180    20(0.28%) |     63       0    6132      5 |   73.23        0.20
+GET      homepage                                                                        4288    13(0.30%) |     61       0    6132      4 |   43.74        0.13
+GET      search-index                                                                    1520     3(0.20%) |     75       1    6132     11 |   15.50        0.03
+GET      stylesheet                                                                      1408     6(0.43%) |     80       0    6127      4 |   14.36        0.06
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+         Aggregated                                                                     14396    42(0.29%) |     65       0    6132      5 |  146.84        0.43
+
+Response time percentiles (approximated)
+Type     Name                                                                                  50%    66%    75%    80%    90%    95%    98%    99%  99.9% 99.99%   100% # reqs
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+GET      document                                                                                5      8      9     11     14     33   1100   1300   6100   6100   6100   7180
+GET      homepage                                                                                4      7      8      9     14     33   1000   1300   6100   6100   6100   4288
+GET      search-index                                                                           11     16     20     24     41     92   1100   1500   4400   6100   6100   1520
+GET      stylesheet                                                                              4      6      8      9     14     61   1100   1300   6100   6100   6100   1408
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+         Aggregated                                                                              5      8     10     11     17     47   1100   1300   6100   6100   6100  14396
+
+Error report
+# occurrences      Error                                                                                               
+------------------|---------------------------------------------------------------------------------------------------------------------------------------------
+2                  GET document: 'URL http://app:8000/page-07/: 0, original=timed out'                                 
+2                  GET document: 'URL http://app:8000/page-03/: 0, original=timed out'                                 
+2                  GET document: 'URL http://app:8000/page-02/: 0, original=timed out'                                 
+6                  GET stylesheet: 'URL http://app:8000/css/base.css: 0, original=timed out'                           
+13                 GET homepage: 'URL http://app:8000/: 0, original=timed out'                                         
+4                  GET document: 'URL http://app:8000/page-16/: 0, original=timed out'                                 
+1                  GET document: 'URL http://app:8000/page-19/: 0, original=timed out'                                 
+2                  GET document: 'URL http://app:8000/page-04/: 0, original=timed out'                                 
+1                  GET document: 'URL http://app:8000/page-17/: 0, original=timed out'                                 
+1                  GET document: 'URL http://app:8000/page-09/: 0, original=timed out'                                 
+1                  GET document: 'URL http://app:8000/page-08/: 0, original=timed out'                                 
+2                  GET document: 'URL http://app:8000/page-06/: 0, original=timed out'                                 
+1                  GET document: 'URL http://app:8000/page-11/: 0, original=timed out'                                 
+1                  GET document: 'URL http://app:8000/page-13/: 0, original=timed out'                                 
+3                  GET search-index: 'URL http://app:8000/search/search_index.json: 0, original=timed out'             
+------------------|---------------------------------------------------------------------------------------------------------------------------------------------
+

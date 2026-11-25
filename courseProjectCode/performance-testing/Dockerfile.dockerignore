@@ -1,0 +1,12 @@
+**
+!pyproject.toml
+!hatch_build.py
+!README.md
+!mkdocs/
+!mkdocs/**
+!courseProjectCode/
+!courseProjectCode/performance-testing/
+!courseProjectCode/performance-testing/**
+**/__pycache__
+**/*.pyc
+mkdocs/tests/

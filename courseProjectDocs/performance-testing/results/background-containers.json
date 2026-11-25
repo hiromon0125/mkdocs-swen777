@@ -1,0 +1,15 @@
+{
+  "sampled_at": 1795580268.79456,
+  "containers": [
+    {
+      "benchmark": true,
+      "cpu_percent": "15.61%",
+      "memory": "91.51MiB / 1GiB"
+    },
+    {
+      "benchmark": true,
+      "cpu_percent": "15.14%",
+      "memory": "38.46MiB / 512MiB"
+    }
+  ]
+}

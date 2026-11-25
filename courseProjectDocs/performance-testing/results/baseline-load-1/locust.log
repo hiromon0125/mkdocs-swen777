@@ -1,0 +1,40 @@
+[2026-11-25 04:12:09,288] 1f4e7e5dbf60/INFO/locust.main: Starting Locust 2.47.0
+[2026-11-25 04:12:09,305] 1f4e7e5dbf60/INFO/locust.runners: 1f4e7e5dbf60_b64fe310c7284666ab517322770f2538 (index 0) reported as ready. 1 workers connected.
+[2026-11-25 04:12:09,306] 1f4e7e5dbf60/INFO/locust.runners: 1f4e7e5dbf60_0c4c8bc385df444d829bbaabb9d8489a (index 1) reported as ready. 2 workers connected.
+[2026-11-25 04:12:10,306] 1f4e7e5dbf60/INFO/locust.runners: Shape test starting.
+[2026-11-25 04:12:10,310] 1f4e7e5dbf60/INFO/locust.runners: Shape worker starting
+[2026-11-25 04:12:10,310] 1f4e7e5dbf60/INFO/locust.runners: Shape test updating to 10 users at 2.00 spawn rate
+[2026-11-25 04:12:10,311] 1f4e7e5dbf60/INFO/locust.runners: Sending spawn jobs of 10 users at 2.00 spawn rate to 2 ready workers
+[2026-11-25 04:12:14,491] 1f4e7e5dbf60/INFO/locust.runners: All users spawned: {"DocumentationReader": 10} (10 total users)
+[2026-11-25 04:12:20,511] 1f4e7e5dbf60/INFO/locust.runners: Shape test updating to 10 users at 10.00 spawn rate
+[2026-11-25 04:12:20,512] 1f4e7e5dbf60/INFO/locust.runners: Sending spawn jobs of 10 users at 10.00 spawn rate to 2 ready workers
+[2026-11-25 04:12:20,513] 1f4e7e5dbf60/INFO/locust.runners: All users spawned: {"DocumentationReader": 10} (10 total users)
+[2026-11-25 04:13:20,818] 1f4e7e5dbf60/INFO/locust.runners: Shape test stopping
+[2026-11-25 04:13:20,819] 1f4e7e5dbf60/INFO/locust.runners: Got quit message from master, shutting down...
+[2026-11-25 04:13:20,819] 1f4e7e5dbf60/INFO/locust.runners: Got quit message from master, shutting down...
+[2026-11-25 04:13:20,847] 1f4e7e5dbf60/INFO/locust.runners: Worker '1f4e7e5dbf60_0c4c8bc385df444d829bbaabb9d8489a' (index 1) quit. 0 workers ready.
+[2026-11-25 04:13:20,848] 1f4e7e5dbf60/INFO/locust.main: Shutting down (exit code 0)
+[2026-11-25 04:13:20,912] 1f4e7e5dbf60/INFO/locust.runners: Worker '1f4e7e5dbf60_b64fe310c7284666ab517322770f2538' (index 0) quit. 0 workers ready.
+[2026-11-25 04:13:20,912] 1f4e7e5dbf60/INFO/locust.runners: The last worker quit, stopping test.
+[2026-11-25 04:13:20,913] 1f4e7e5dbf60/INFO/locust.main: Shutting down (exit code 0)
+[2026-11-25 04:13:21,324] 1f4e7e5dbf60/INFO/locust.main: Shape test completed, shutting down
+[2026-11-25 04:13:22,397] 1f4e7e5dbf60/INFO/locust.main: Shutting down (exit code 0)
+Type     Name                                                                          # reqs      # fails |    Avg     Min     Max    Med |   req/s  failures/s
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+GET      document                                                                        2623     0(0.00%) |     26       0    1221     10 |   37.15        0.00
+GET      homepage                                                                        1602     0(0.00%) |     25       0    1062      9 |   22.69        0.00
+GET      search-index                                                                     536     0(0.00%) |     25       1    1072     16 |    7.59        0.00
+GET      stylesheet                                                                       532     0(0.00%) |     34       1    1070      9 |    7.54        0.00
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+         Aggregated                                                                      5293     0(0.00%) |     26       0    1221     10 |   74.97        0.00
+
+Response time percentiles (approximated)
+Type     Name                                                                                  50%    66%    75%    80%    90%    95%    98%    99%  99.9% 99.99%   100% # reqs
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+GET      document                                                                               10     12     13     14     16     18     21   1000   1100   1200   1200   2623
+GET      homepage                                                                                9     11     12     12     14     16     21   1000   1100   1100   1100   1602
+GET      search-index                                                                           16     18     20     21     24     27     35     42   1100   1100   1100    536
+GET      stylesheet                                                                              9     11     12     13     15     18   1000   1000   1100   1100   1100    532
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+         Aggregated                                                                             10     12     13     14     17     20     28   1000   1100   1200   1200   5293
+
