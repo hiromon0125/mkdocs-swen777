@@ -1,0 +1,80 @@
+[2026-11-25 00:05:32,088] 0caa54fc777d/INFO/locust.main: Starting Locust 2.47.0
+[2026-11-25 00:05:32,090] 0caa54fc777d/INFO/locust.runners: Shape test starting.
+[2026-11-25 00:05:32,091] 0caa54fc777d/INFO/locust.runners: Shape worker starting
+[2026-11-25 00:05:32,091] 0caa54fc777d/INFO/locust.runners: Shape test updating to 10 users at 2.00 spawn rate
+[2026-11-25 00:05:32,093] 0caa54fc777d/INFO/locust.runners: Ramping to 10 users at a rate of 2.00 per second
+[2026-11-25 00:05:36,130] 0caa54fc777d/INFO/locust.runners: All users spawned: {"DocumentationReader": 10} (10 total users)
+[2026-11-25 00:05:42,223] 0caa54fc777d/INFO/locust.runners: Shape test updating to 10 users at 10.00 spawn rate
+[2026-11-25 00:05:42,224] 0caa54fc777d/INFO/locust.runners: Ramping to 10 users at a rate of 10.00 per second
+[2026-11-25 00:05:42,224] 0caa54fc777d/INFO/locust.runners: All users spawned: {"DocumentationReader": 10} (10 total users)
+[2026-11-25 00:06:12,412] 0caa54fc777d/INFO/locust.runners: Shape test updating to 25 users at 5.00 spawn rate
+[2026-11-25 00:06:12,413] 0caa54fc777d/INFO/locust.runners: Ramping to 25 users at a rate of 5.00 per second
+[2026-11-25 00:06:14,420] 0caa54fc777d/INFO/locust.runners: All users spawned: {"DocumentationReader": 25} (25 total users)
+[2026-11-25 00:06:42,538] 0caa54fc777d/INFO/locust.runners: Shape test updating to 50 users at 10.00 spawn rate
+[2026-11-25 00:06:42,539] 0caa54fc777d/INFO/locust.runners: Ramping to 50 users at a rate of 10.00 per second
+[2026-11-25 00:06:44,543] 0caa54fc777d/INFO/locust.runners: All users spawned: {"DocumentationReader": 50} (50 total users)
+[2026-11-25 00:07:12,630] 0caa54fc777d/INFO/locust.runners: Shape test updating to 100 users at 20.00 spawn rate
+[2026-11-25 00:07:12,630] 0caa54fc777d/INFO/locust.runners: Ramping to 100 users at a rate of 20.00 per second
+[2026-11-25 00:07:14,635] 0caa54fc777d/INFO/locust.runners: All users spawned: {"DocumentationReader": 100} (100 total users)
+[2026-11-25 00:07:42,794] 0caa54fc777d/INFO/locust.runners: Shape test updating to 200 users at 40.00 spawn rate
+[2026-11-25 00:07:42,795] 0caa54fc777d/INFO/locust.runners: Ramping to 200 users at a rate of 40.00 per second
+[2026-11-25 00:07:44,814] 0caa54fc777d/INFO/locust.runners: All users spawned: {"DocumentationReader": 200} (200 total users)
+[2026-11-25 00:08:12,969] 0caa54fc777d/INFO/locust.runners: Shape test updating to 400 users at 80.00 spawn rate
+[2026-11-25 00:08:12,973] 0caa54fc777d/INFO/locust.runners: Ramping to 400 users at a rate of 80.00 per second
+[2026-11-25 00:08:14,977] 0caa54fc777d/INFO/locust.runners: All users spawned: {"DocumentationReader": 400} (400 total users)
+[2026-11-25 00:08:42,144] 0caa54fc777d/INFO/locust.runners: Shape test updating to 10 users at 400.00 spawn rate
+[2026-11-25 00:08:42,144] 0caa54fc777d/WARNING/locust.runners: Your selected spawn rate is very high (>100), and this is known to sometimes cause issues. Do you really need to ramp up that fast?
+[2026-11-25 00:08:42,151] 0caa54fc777d/INFO/locust.runners: Ramping to 10 users at a rate of 400.00 per second
+[2026-11-25 00:08:42,159] 0caa54fc777d/WARNING/root: CPU usage above 90%! This may constrain your throughput and may even give inconsistent response time measurements! See https://docs.locust.io/en/stable/running-distributed.html for how to distribute the load over multiple CPU cores or machines
+[2026-11-25 00:08:44,501] 0caa54fc777d/INFO/locust.runners: All users spawned: {"DocumentationReader": 10} (10 total users)
+[2026-11-25 00:09:12,392] 0caa54fc777d/INFO/locust.runners: Shape test stopping
+[2026-11-25 00:09:12,914] 0caa54fc777d/WARNING/locust.runners: CPU usage was too high at some point during the test! See https://docs.locust.io/en/stable/running-distributed.html for how to distribute the load over multiple CPU cores or machines
+[2026-11-25 00:09:12,915] 0caa54fc777d/INFO/locust.main: Shape test completed, shutting down
+[2026-11-25 00:09:13,000] 0caa54fc777d/INFO/locust.main: Shutting down (exit code 1)
+Type     Name                                                                          # reqs      # fails |    Avg     Min     Max    Med |   req/s  failures/s
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+GET      document                                                                       46567  1216(2.61%) |    149       0    6200     10 |  210.88        5.51
+GET      homepage                                                                       28013   788(2.81%) |    154       0    6200      9 |  126.86        3.57
+GET      search-index                                                                    9277   224(2.41%) |    155       1    6072     28 |   42.01        1.01
+GET      stylesheet                                                                      9388   223(2.38%) |    140       0    6093      9 |   42.51        1.01
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+         Aggregated                                                                     93245  2451(2.63%) |    150       0    6200     11 |  422.26       11.10
+
+Response time percentiles (approximated)
+Type     Name                                                                                  50%    66%    75%    80%    90%    95%    98%    99%  99.9% 99.99%   100% # reqs
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+GET      document                                                                               10     19     27     33     68   1100   2000   2000   6000   6100   6200  46567
+GET      homepage                                                                                9     18     26     32     81   1200   2000   2000   6000   6100   6200  28013
+GET      search-index                                                                           28     43     58     69    100   1100   2000   2000   4600   6100   6100   9277
+GET      stylesheet                                                                              9     18     26     31     59   1100   2000   2000   6100   6100   6100   9388
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+         Aggregated                                                                             11     21     29     36     84   1100   2000   2000   6000   6100   6200  93245
+
+Error report
+# occurrences      Error                                                                                               
+------------------|---------------------------------------------------------------------------------------------------------------------------------------------
+54                 GET document: URL http://app:8000/page-12/: 0, original=timed out                                   
+788                GET homepage: URL http://app:8000/: 0, original=timed out                                           
+57                 GET document: URL http://app:8000/page-03/: 0, original=timed out                                   
+49                 GET document: URL http://app:8000/page-07/: 0, original=timed out                                   
+223                GET stylesheet: URL http://app:8000/css/base.css: 0, original=timed out                             
+62                 GET document: URL http://app:8000/page-11/: 0, original=timed out                                   
+70                 GET document: URL http://app:8000/page-13/: 0, original=timed out                                   
+63                 GET document: URL http://app:8000/page-06/: 0, original=timed out                                   
+71                 GET document: URL http://app:8000/page-10/: 0, original=timed out                                   
+224                GET search-index: URL http://app:8000/search/search_index.json: 0, original=timed out               
+62                 GET document: URL http://app:8000/page-17/: 0, original=timed out                                   
+55                 GET document: URL http://app:8000/page-04/: 0, original=timed out                                   
+60                 GET document: URL http://app:8000/page-08/: 0, original=timed out                                   
+57                 GET document: URL http://app:8000/page-16/: 0, original=timed out                                   
+71                 GET document: URL http://app:8000/page-15/: 0, original=timed out                                   
+69                 GET document: URL http://app:8000/page-18/: 0, original=timed out                                   
+51                 GET document: URL http://app:8000/page-00/: 0, original=timed out                                   
+60                 GET document: URL http://app:8000/page-01/: 0, original=timed out                                   
+72                 GET document: URL http://app:8000/page-19/: 0, original=timed out                                   
+64                 GET document: URL http://app:8000/page-05/: 0, original=timed out                                   
+70                 GET document: URL http://app:8000/page-02/: 0, original=timed out                                   
+52                 GET document: URL http://app:8000/page-09/: 0, original=timed out                                   
+47                 GET document: URL http://app:8000/page-14/: 0, original=timed out                                   
+------------------|---------------------------------------------------------------------------------------------------------------------------------------------
+

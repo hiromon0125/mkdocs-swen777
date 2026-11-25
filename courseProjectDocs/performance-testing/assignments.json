@@ -1,0 +1,20 @@
+{
+  "assignments": {
+    "load": "Godson Umoren",
+    "stress": "Hiroto Takeuchi",
+    "spike": "Ty Carpenter"
+  },
+  "method": "One-time SystemRandom shuffle after matching the roster to fork commit identities; persisted test ownership mapping",
+  "commit_identities": {
+    "Hiroto Takeuchi": [
+      "Hiro",
+      "Hiroto Takeuchi"
+    ],
+    "Godson Umoren": [
+      "Godson Umoren"
+    ],
+    "Ty Carpenter": [
+      "tjc7058"
+    ]
+  }
+}

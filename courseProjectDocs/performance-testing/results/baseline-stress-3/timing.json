@@ -1,0 +1,60 @@
+{
+  "started_at": 1795580946.2756886,
+  "profile": "stress",
+  "duration_scale": 1.0,
+  "seed": "780",
+  "stages": [
+    {
+      "name": "warmup",
+      "seconds": 10,
+      "users": 10,
+      "spawn_rate": 2
+    },
+    {
+      "name": "users-10",
+      "seconds": 30,
+      "users": 10,
+      "spawn_rate": 10
+    },
+    {
+      "name": "users-25",
+      "seconds": 30,
+      "users": 25,
+      "spawn_rate": 5
+    },
+    {
+      "name": "users-50",
+      "seconds": 30,
+      "users": 50,
+      "spawn_rate": 10
+    },
+    {
+      "name": "users-100",
+      "seconds": 30,
+      "users": 100,
+      "spawn_rate": 20
+    },
+    {
+      "name": "users-200",
+      "seconds": 30,
+      "users": 200,
+      "spawn_rate": 40
+    },
+    {
+      "name": "users-400",
+      "seconds": 30,
+      "users": 400,
+      "spawn_rate": 80
+    },
+    {
+      "name": "recovery",
+      "seconds": 30,
+      "users": 10,
+      "spawn_rate": 400
+    }
+  ],
+  "wait_seconds": 0.1,
+  "connection_timeout_seconds": 2,
+  "network_timeout_seconds": 5,
+  "workers": 2
+}

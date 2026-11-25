@@ -1,0 +1,4 @@
+app-1  | INFO    -  Building documentation...
+app-1  | INFO    -  Cleaning site directory
+app-1  | INFO    -  Documentation built in 0.13 seconds
+app-1  | INFO    -  [04:19:02] Serving on http://0.0.0.0:8000/

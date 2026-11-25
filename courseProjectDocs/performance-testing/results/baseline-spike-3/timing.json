@@ -1,0 +1,36 @@
+{
+  "started_at": 1795580760.623985,
+  "profile": "spike",
+  "duration_scale": 1.0,
+  "seed": "780",
+  "stages": [
+    {
+      "name": "warmup",
+      "seconds": 10,
+      "users": 10,
+      "spawn_rate": 2
+    },
+    {
+      "name": "baseline",
+      "seconds": 30,
+      "users": 10,
+      "spawn_rate": 10
+    },
+    {
+      "name": "surge",
+      "seconds": 15,
+      "users": 100,
+      "spawn_rate": 400
+    },
+    {
+      "name": "recovery",
+      "seconds": 45,
+      "users": 10,
+      "spawn_rate": 400
+    }
+  ],
+  "wait_seconds": 0.1,
+  "connection_timeout_seconds": 2,
+  "network_timeout_seconds": 5,
+  "workers": 2
+}

@@ -1,0 +1,2 @@
+# Runtime markers used to assign Locust worker IDs.
+*/worker-*.lock

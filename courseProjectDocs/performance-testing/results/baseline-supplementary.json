@@ -1,0 +1,66 @@
+{
+  "load_requests_over_1s": 236,
+  "load_steady_requests": 13816,
+  "spike_last_20_seconds": [
+    {
+      "run_id": "baseline-spike-1",
+      "window_start_s": 80.0,
+      "window_end_s": 100.0,
+      "requests": 1528,
+      "successful_rps": 76.4,
+      "failures": 0,
+      "p95_ms": 44.982730699999955,
+      "actual_users_min": 10,
+      "actual_users_max": 10
+    },
+    {
+      "run_id": "baseline-spike-2",
+      "window_start_s": 80.0,
+      "window_end_s": 100.0,
+      "requests": 1557,
+      "successful_rps": 77.85,
+      "failures": 0,
+      "p95_ms": 20.201499599999952,
+      "actual_users_min": 10,
+      "actual_users_max": 10
+    },
+    {
+      "run_id": "baseline-spike-3",
+      "window_start_s": 80.0,
+      "window_end_s": 100.0,
+      "requests": 1571,
+      "successful_rps": 78.55,
+      "failures": 0,
+      "p95_ms": 19.052792,
+      "actual_users_min": 10,
+      "actual_users_max": 10
+    }
+  ],
+  "all_completed_requests_including_warmup_and_drain": 323901,
+  "all_failures_including_warmup_and_drain": 9536,
+  "error_counts_including_warmup_and_drain": {
+    "URL http://app:8000/page-04/: 0, original=timed out": 268,
+    "URL http://app:8000/page-10/: 0, original=timed out": 242,
+    "URL http://app:8000/page-02/: 0, original=timed out": 221,
+    "URL http://app:8000/: 0, original=timed out": 2807,
+    "URL http://app:8000/page-16/: 0, original=timed out": 252,
+    "URL http://app:8000/page-06/: 0, original=timed out": 232,
+    "URL http://app:8000/css/base.css: 0, original=timed out": 977,
+    "URL http://app:8000/page-15/: 0, original=timed out": 244,
+    "URL http://app:8000/page-18/: 0, original=timed out": 234,
+    "URL http://app:8000/page-08/: 0, original=timed out": 235,
+    "URL http://app:8000/search/search_index.json: 0, original=timed out": 990,
+    "URL http://app:8000/page-11/: 0, original=timed out": 258,
+    "URL http://app:8000/page-13/: 0, original=timed out": 254,
+    "URL http://app:8000/page-09/: 0, original=timed out": 215,
+    "URL http://app:8000/page-01/: 0, original=timed out": 242,
+    "URL http://app:8000/page-12/: 0, original=timed out": 236,
+    "URL http://app:8000/page-14/: 0, original=timed out": 257,
+    "URL http://app:8000/page-17/: 0, original=timed out": 230,
+    "URL http://app:8000/page-03/: 0, original=timed out": 223,
+    "URL http://app:8000/page-00/: 0, original=timed out": 238,
+    "URL http://app:8000/page-19/: 0, original=timed out": 273,
+    "URL http://app:8000/page-07/: 0, original=timed out": 214,
+    "URL http://app:8000/page-05/: 0, original=timed out": 194
+  }
+}

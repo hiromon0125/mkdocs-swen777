@@ -1,0 +1,71 @@
+[2026-11-25 00:13:41,584] 4e56a6fd7152/INFO/locust.main: Starting Locust 2.47.0
+[2026-11-25 00:13:41,598] 4e56a6fd7152/INFO/locust.runners: 4e56a6fd7152_f48eb90aa3864dd7a7ca1a984f99ca9d (index 0) reported as ready. 1 workers connected.
+[2026-11-25 00:13:41,599] 4e56a6fd7152/INFO/locust.runners: 4e56a6fd7152_4cad2c232ad54a89bfad47314d1d349b (index 1) reported as ready. 2 workers connected.
+[2026-11-25 00:13:42,605] 4e56a6fd7152/INFO/locust.runners: Shape test starting.
+[2026-11-25 00:13:42,609] 4e56a6fd7152/INFO/locust.runners: Shape worker starting
+[2026-11-25 00:13:42,609] 4e56a6fd7152/INFO/locust.runners: Shape test updating to 10 users at 20.00 spawn rate
+[2026-11-25 00:13:42,609] 4e56a6fd7152/INFO/locust.runners: Sending spawn jobs of 10 users at 20.00 spawn rate to 2 ready workers
+[2026-11-25 00:13:42,775] 4e56a6fd7152/INFO/locust.runners: All users spawned: {"DocumentationReader": 10} (10 total users)
+[2026-11-25 00:13:44,614] 4e56a6fd7152/INFO/locust.runners: Shape test updating to 10 users at 100.00 spawn rate
+[2026-11-25 00:13:44,614] 4e56a6fd7152/INFO/locust.runners: Sending spawn jobs of 10 users at 100.00 spawn rate to 2 ready workers
+[2026-11-25 00:13:44,616] 4e56a6fd7152/INFO/locust.runners: All users spawned: {"DocumentationReader": 10} (10 total users)
+[2026-11-25 00:13:46,622] 4e56a6fd7152/INFO/locust.runners: Shape test updating to 100 users at 4000.00 spawn rate
+[2026-11-25 00:13:46,622] 4e56a6fd7152/INFO/locust.runners: Sending spawn jobs of 100 users at 4000.00 spawn rate to 2 ready workers
+[2026-11-25 00:13:46,623] 4e56a6fd7152/WARNING/locust.runners: Your selected spawn rate is very high (>100/worker), and this is known to sometimes cause issues. Do you really need to ramp up that fast?
+[2026-11-25 00:13:46,774] 4e56a6fd7152/INFO/locust.runners: All users spawned: {"DocumentationReader": 100} (100 total users)
+[2026-11-25 00:13:48,631] 4e56a6fd7152/INFO/locust.runners: Shape test updating to 10 users at 4000.00 spawn rate
+[2026-11-25 00:13:48,631] 4e56a6fd7152/INFO/locust.runners: Sending spawn jobs of 10 users at 4000.00 spawn rate to 2 ready workers
+[2026-11-25 00:13:48,632] 4e56a6fd7152/WARNING/locust.runners: Your selected spawn rate is very high (>100/worker), and this is known to sometimes cause issues. Do you really need to ramp up that fast?
+[2026-11-25 00:13:49,636] 4e56a6fd7152/INFO/locust.runners: Spawning is complete and report waittime is expired, but not all reports received from workers: {"DocumentationReader": 100} (100 total users)
+[2026-11-25 00:13:52,688] 4e56a6fd7152/INFO/locust.runners: Shape test stopping
+[2026-11-25 00:13:52,690] 4e56a6fd7152/INFO/locust.runners: Got quit message from master, shutting down...
+[2026-11-25 00:13:52,690] 4e56a6fd7152/INFO/locust.runners: Got quit message from master, shutting down...
+[2026-11-25 00:13:52,797] 4e56a6fd7152/INFO/locust.runners: Worker '4e56a6fd7152_4cad2c232ad54a89bfad47314d1d349b' (index 1) quit. 0 workers ready.
+[2026-11-25 00:13:52,798] 4e56a6fd7152/INFO/locust.runners: Worker '4e56a6fd7152_f48eb90aa3864dd7a7ca1a984f99ca9d' (index 0) quit. 0 workers ready.
+[2026-11-25 00:13:52,798] 4e56a6fd7152/INFO/locust.runners: The last worker quit, stopping test.
+[2026-11-25 00:13:52,799] 4e56a6fd7152/INFO/locust.main: Shutting down (exit code 0)
+[2026-11-25 00:13:52,799] 4e56a6fd7152/INFO/locust.main: Shutting down (exit code 0)
+[2026-11-25 00:13:53,202] 4e56a6fd7152/INFO/locust.main: Shape test completed, shutting down
+[2026-11-25 00:13:54,279] 4e56a6fd7152/INFO/locust.main: Shutting down (exit code 1)
+Type     Name                                                                          # reqs      # fails |    Avg     Min     Max    Med |   req/s  failures/s
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+GET      document                                                                         479    19(3.97%) |    405       0    6025      8 |   47.02        1.87
+GET      homepage                                                                         271    11(4.06%) |    367       0    6025      7 |   26.60        1.08
+GET      search-index                                                                      97     2(2.06%) |    247       2    6025     14 |    9.52        0.20
+GET      stylesheet                                                                        97     3(3.09%) |    334       0    6025      9 |    9.52        0.29
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+         Aggregated                                                                       944    35(3.71%) |    370       0    6025      8 |   92.66        3.44
+
+Response time percentiles (approximated)
+Type     Name                                                                                  50%    66%    75%    80%    90%    95%    98%    99%  99.9% 99.99%   100% # reqs
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+GET      document                                                                                8     12     13     16   1100   4300   6000   6000   6000   6000   6000    479
+GET      homepage                                                                                7     10     13     14   1000   2700   6000   6000   6000   6000   6000    271
+GET      search-index                                                                           14     20     22     24   1000   1100   6000   6000   6000   6000   6000     97
+GET      stylesheet                                                                              9     11     14     15   1100   1800   6000   6000   6000   6000   6000     97
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+         Aggregated                                                                              8     12     14     17   1100   2000   6000   6000   6000   6000   6000    944
+
+Error report
+# occurrences      Error                                                                                               
+------------------|---------------------------------------------------------------------------------------------------------------------------------------------
+11                 GET homepage: 'URL http://app:8000/: 0, original=timed out'                                         
+1                  GET document: 'URL http://app:8000/page-16/: 0, original=timed out'                                 
+2                  GET search-index: 'URL http://app:8000/search/search_index.json: 0, original=timed out'             
+1                  GET document: 'URL http://app:8000/page-17/: 0, original=timed out'                                 
+1                  GET document: 'URL http://app:8000/page-13/: 0, original=timed out'                                 
+3                  GET document: 'URL http://app:8000/page-19/: 0, original=timed out'                                 
+1                  GET document: 'URL http://app:8000/page-02/: 0, original=timed out'                                 
+1                  GET document: 'URL http://app:8000/page-07/: 0, original=timed out'                                 
+2                  GET document: 'URL http://app:8000/page-11/: 0, original=timed out'                                 
+3                  GET stylesheet: 'URL http://app:8000/css/base.css: 0, original=timed out'                           
+1                  GET document: 'URL http://app:8000/page-14/: 0, original=timed out'                                 
+1                  GET document: 'URL http://app:8000/page-06/: 0, original=timed out'                                 
+2                  GET document: 'URL http://app:8000/page-01/: 0, original=timed out'                                 
+1                  GET document: 'URL http://app:8000/page-04/: 0, original=timed out'                                 
+1                  GET document: 'URL http://app:8000/page-00/: 0, original=timed out'                                 
+1                  GET document: 'URL http://app:8000/page-15/: 0, original=timed out'                                 
+1                  GET document: 'URL http://app:8000/page-05/: 0, original=timed out'                                 
+1                  GET document: 'URL http://app:8000/page-18/: 0, original=timed out'                                 
+------------------|---------------------------------------------------------------------------------------------------------------------------------------------
+

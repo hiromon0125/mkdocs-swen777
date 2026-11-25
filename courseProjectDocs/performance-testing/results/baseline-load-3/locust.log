@@ -1,0 +1,46 @@
+[2026-11-25 04:27:47,454] 691d9587b540/INFO/locust.main: Starting Locust 2.47.0
+[2026-11-25 04:27:47,469] 691d9587b540/INFO/locust.runners: 691d9587b540_4257379a71dd4839896f2c8a8c3355fe (index 0) reported as ready. 1 workers connected.
+[2026-11-25 04:27:47,470] 691d9587b540/INFO/locust.runners: 691d9587b540_86a8f48c96eb4026888614b00d8b1825 (index 1) reported as ready. 2 workers connected.
+[2026-11-25 04:27:48,471] 691d9587b540/INFO/locust.runners: Shape test starting.
+[2026-11-25 04:27:48,475] 691d9587b540/INFO/locust.runners: Shape worker starting
+[2026-11-25 04:27:48,475] 691d9587b540/INFO/locust.runners: Shape test updating to 10 users at 2.00 spawn rate
+[2026-11-25 04:27:48,475] 691d9587b540/INFO/locust.runners: Sending spawn jobs of 10 users at 2.00 spawn rate to 2 ready workers
+[2026-11-25 04:27:52,667] 691d9587b540/INFO/locust.runners: All users spawned: {"DocumentationReader": 10} (10 total users)
+[2026-11-25 04:27:58,697] 691d9587b540/INFO/locust.runners: Shape test updating to 10 users at 10.00 spawn rate
+[2026-11-25 04:27:58,698] 691d9587b540/INFO/locust.runners: Sending spawn jobs of 10 users at 10.00 spawn rate to 2 ready workers
+[2026-11-25 04:27:58,700] 691d9587b540/INFO/locust.runners: All users spawned: {"DocumentationReader": 10} (10 total users)
+[2026-11-25 04:28:58,938] 691d9587b540/INFO/locust.runners: Shape test stopping
+[2026-11-25 04:28:58,941] 691d9587b540/INFO/locust.runners: Got quit message from master, shutting down...
+[2026-11-25 04:28:58,941] 691d9587b540/INFO/locust.runners: Got quit message from master, shutting down...
+[2026-11-25 04:28:58,980] 691d9587b540/INFO/locust.runners: Worker '691d9587b540_4257379a71dd4839896f2c8a8c3355fe' (index 0) quit. 0 workers ready.
+[2026-11-25 04:28:58,982] 691d9587b540/INFO/locust.main: Shutting down (exit code 0)
+[2026-11-25 04:28:58,985] 691d9587b540/INFO/locust.runners: Worker '691d9587b540_86a8f48c96eb4026888614b00d8b1825' (index 1) quit. 0 workers ready.
+[2026-11-25 04:28:58,985] 691d9587b540/INFO/locust.runners: The last worker quit, stopping test.
+[2026-11-25 04:28:58,986] 691d9587b540/INFO/locust.main: Shutting down (exit code 0)
+[2026-11-25 04:28:59,446] 691d9587b540/INFO/locust.main: Shape test completed, shutting down
+[2026-11-25 04:29:00,526] 691d9587b540/INFO/locust.main: Shutting down (exit code 1)
+Type     Name                                                                          # reqs      # fails |    Avg     Min     Max    Med |   req/s  failures/s
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+GET      document                                                                        2643     0(0.00%) |     24       0    1071      9 |   37.48        0.00
+GET      homepage                                                                        1608     0(0.00%) |     26       0    1070      8 |   22.81        0.00
+GET      search-index                                                                     560     0(0.00%) |     32       1    1069     13 |    7.94        0.00
+GET      stylesheet                                                                       530     1(0.19%) |     19       0    2013      8 |    7.52        0.01
+--------|----------------------------------------------------------------------------|-------|-------------|-------|-------|-------|-------|--------|-----------
+         Aggregated                                                                      5341     1(0.02%) |     25       0    2013      9 |   75.75        0.01
+
+Response time percentiles (approximated)
+Type     Name                                                                                  50%    66%    75%    80%    90%    95%    98%    99%  99.9% 99.99%   100% # reqs
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+GET      document                                                                                9     11     12     13     15     17     21   1000   1100   1100   1100   2643
+GET      homepage                                                                                8     10     11     12     14     16     49   1000   1100   1100   1100   1608
+GET      search-index                                                                           13     17     19     20     23     27     34   1000   1100   1100   1100    560
+GET      stylesheet                                                                              8     10     11     12     14     16     20     68   2000   2000   2000    530
+--------|--------------------------------------------------------------------------------|--------|------|------|------|------|------|------|------|------|------|------|------
+         Aggregated                                                                              9     11     12     13     16     19     29   1000   1100   2000   2000   5341
+
+Error report
+# occurrences      Error                                                                                               
+------------------|---------------------------------------------------------------------------------------------------------------------------------------------
+1                  GET stylesheet: 'URL http://app:8000/css/base.css: 0, original=timed out'                           
+------------------|---------------------------------------------------------------------------------------------------------------------------------------------
+

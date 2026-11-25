@@ -1,0 +1,46 @@
+services:
+  app:
+    image: mkdocs-swen777-performance:local
+    build:
+      context: ../..
+      dockerfile: courseProjectCode/performance-testing/Dockerfile
+    cpus: 1.0
+    mem_limit: 512m
+    memswap_limit: 512m
+    pids_limit: 1024
+    init: true
+    environment:
+      RUN_ID: ${RUN_ID:-manual}
+    volumes:
+      - ../../courseProjectDocs/performance-testing/results:/results
+    command: ["python", "monitor.py", "--output", "/results/${RUN_ID:-manual}/app-resources.csv", "--", "python", "-m", "mkdocs", "serve", "--no-livereload", "-a", "0.0.0.0:8000", "-f", "/fixture/mkdocs.yml"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/', timeout=2).read()"]
+      interval: 30s
+      start_interval: 1s
+      start_period: 30s
+      timeout: 3s
+      retries: 30
+    networks: [benchmark]
+  runner:
+    image: mkdocs-swen777-performance:local
+    cpus: 2.0
+    mem_limit: 1g
+    memswap_limit: 1g
+    pids_limit: 256
+    init: true
+    environment:
+      RUN_ID: ${RUN_ID:-manual}
+      TEST_TYPE: ${TEST_TYPE:-load}
+      DURATION_SCALE: ${DURATION_SCALE:-1}
+      PERF_SEED: ${PERF_SEED:-777}
+    volumes:
+      - ../../courseProjectDocs/performance-testing/results:/results
+    command: ["python", "run.py", "--type", "${TEST_TYPE:-load}", "--run-id", "${RUN_ID:-manual}", "--scale", "${DURATION_SCALE:-1}"]
+    depends_on:
+      app:
+        condition: service_healthy
+    networks: [benchmark]
+networks:
+  benchmark:
+    internal: true

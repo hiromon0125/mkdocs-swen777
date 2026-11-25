@@ -1,0 +1,22 @@
+{
+  "load": [
+    {"name": "warmup", "seconds": 10, "users": 10, "spawn_rate": 2},
+    {"name": "steady", "seconds": 60, "users": 10, "spawn_rate": 10}
+  ],
+  "stress": [
+    {"name": "warmup", "seconds": 10, "users": 10, "spawn_rate": 2},
+    {"name": "users-10", "seconds": 30, "users": 10, "spawn_rate": 10},
+    {"name": "users-25", "seconds": 30, "users": 25, "spawn_rate": 5},
+    {"name": "users-50", "seconds": 30, "users": 50, "spawn_rate": 10},
+    {"name": "users-100", "seconds": 30, "users": 100, "spawn_rate": 20},
+    {"name": "users-200", "seconds": 30, "users": 200, "spawn_rate": 40},
+    {"name": "users-400", "seconds": 30, "users": 400, "spawn_rate": 80},
+    {"name": "recovery", "seconds": 30, "users": 10, "spawn_rate": 400}
+  ],
+  "spike": [
+    {"name": "warmup", "seconds": 10, "users": 10, "spawn_rate": 2},
+    {"name": "baseline", "seconds": 30, "users": 10, "spawn_rate": 10},
+    {"name": "surge", "seconds": 15, "users": 100, "spawn_rate": 400},
+    {"name": "recovery", "seconds": 45, "users": 10, "spawn_rate": 400}
+  ]
+}
